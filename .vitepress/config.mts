@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 
 const repository = "https://github.com/mateusneiva/licht-launcher";
+const website = "https://licht-launcher.github.io/";
 
 export default defineConfig({
   title: "Licht Launcher",
@@ -8,6 +9,41 @@ export default defineConfig({
   lang: "en-US",
   base: "/",
   srcDir: "src",
+  head: [
+    ["link", { rel: "icon", type: "image/vnd.microsoft.icon", href: "/favicon.ico" }],
+  ],
+  sitemap: {
+    hostname: website,
+    transformItems: (items) => items.filter((item) => item.url !== "404.html"),
+  },
+  transformHead({ page, title, description }) {
+    if (page === "404.md") {
+      return [["meta", { name: "robots", content: "noindex" }]];
+    }
+
+    const path = page.replace(/(^|\/)index\.md$/, "$1").replace(/\.md$/, ".html");
+    const url = new URL(path, website).href;
+    const image = new URL("launcher-icon.png", website).href;
+
+    return [
+      ["link", { rel: "canonical", href: url }],
+      ["meta", { property: "og:type", content: "website" }],
+      ["meta", { property: "og:site_name", content: "Licht Launcher" }],
+      ["meta", { property: "og:locale", content: "en_US" }],
+      ["meta", { property: "og:url", content: url }],
+      ["meta", { property: "og:title", content: title }],
+      ["meta", { property: "og:description", content: description }],
+      ["meta", { property: "og:image", content: image }],
+      ["meta", { property: "og:image:width", content: "512" }],
+      ["meta", { property: "og:image:height", content: "512" }],
+      ["meta", { property: "og:image:alt", content: "Licht Launcher flower icon" }],
+      ["meta", { name: "twitter:card", content: "summary" }],
+      ["meta", { name: "twitter:title", content: title }],
+      ["meta", { name: "twitter:description", content: description }],
+      ["meta", { name: "twitter:image", content: image }],
+      ["meta", { name: "twitter:image:alt", content: "Licht Launcher flower icon" }],
+    ];
+  },
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
