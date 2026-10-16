@@ -12,5 +12,5 @@
     "verbatimModuleSyntax": true,
     "skipLibCheck": true
   },
-  "include": [".vitepress/config.mts", "scripts/**/*.mts", "tests/**/*.mts"]
+  "include": [".vitepress/**/*.mts", ".vitepress/**/*.ts", "scripts/**/*.mts", "tests/**/*.mts"]
 }

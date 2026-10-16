@@ -45,6 +45,7 @@ export default defineConfig({
     ];
   },
   themeConfig: {
+    logo: { src: "/launcher-icon.png", alt: "" },
     nav: [
       { text: "Home", link: "/" },
       { text: "Privacy", link: "/privacy" },
@@ -54,8 +55,8 @@ export default defineConfig({
     socialLinks: [{ icon: "github", link: repository }],
     outline: [2, 3],
     footer: {
-      message: "Unofficial project, not affiliated with Mojang Studios or Microsoft.",
-      copyright: "Copyright © 2026 Mateus Neiva. Released under the MIT License.",
+      message: 'Unofficial project, not affiliated with Mojang Studios or Microsoft.<br><a href="/privacy.html">Privacy Policy</a>',
+      copyright: `Copyright © 2026 Mateus Neiva. Released under the <a href="${repository}/blob/main/LICENSE">MIT License</a>.`,
     },
   },
   markdown: {
