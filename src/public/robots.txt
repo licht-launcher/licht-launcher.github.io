@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://licht-launcher.github.io/sitemap.xml
