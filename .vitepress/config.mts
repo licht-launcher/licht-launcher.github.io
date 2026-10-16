@@ -7,7 +7,7 @@ export default defineConfig({
   description: "A light, open-source launcher for Minecraft: Java Edition on Windows and Linux.",
   lang: "en-US",
   base: "/",
-  srcExclude: ["README.md", "policies/**"],
+  srcDir: "src",
   themeConfig: {
     nav: [
       { text: "Home", link: "/" },
@@ -26,7 +26,7 @@ export default defineConfig({
     config(md) {
       // Rewrite repository-relative policy links before VitePress resolves them.
       md.core.ruler.after("inline", "policy-links", (state) => {
-        const destinations = {
+        const destinations: Record<string, string> = {
           "PRIVACY.md": "/privacy.md",
           "TERMS.md": "/terms.md",
           "README.md": `${repository}/blob/main/README.md`,

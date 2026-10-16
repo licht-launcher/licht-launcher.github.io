@@ -3,10 +3,11 @@ import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
+import type { TestContext } from "node:test";
 import { pathToFileURL } from "node:url";
-import { syncPolicies } from "../scripts/sync-policies.mjs";
+import { syncPolicies } from "../scripts/sync-policies.mts";
 
-async function temporaryDestination(t) {
+async function temporaryDestination(t: TestContext): Promise<URL> {
   const directory = await mkdtemp(join(tmpdir(), "licht-website-policies-"));
   t.after(() => rm(directory, { recursive: true, force: true }));
   return new URL(`${pathToFileURL(directory).href}/`);
@@ -18,7 +19,7 @@ const terms = `# Terms of Use\n\n${disclaimer}\n`;
 
 test("imports the canonical documents from the launcher's main branch", async (t) => {
   const destination = await temporaryDestination(t);
-  const requested = [];
+  const requested: string[] = [];
   await syncPolicies({
     destination,
     fetchDocument: async (url) => {
