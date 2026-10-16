@@ -7,10 +7,15 @@ const documents = [
   { name: "TERMS.md", heading: "# Terms of Use" },
 ];
 
+interface SyncPoliciesOptions {
+  fetchDocument?: (url: URL, options: RequestInit) => Promise<Response>;
+  destination?: URL;
+}
+
 export async function syncPolicies({
   fetchDocument = fetch,
   destination = new URL("../policies/", import.meta.url),
-} = {}) {
+}: SyncPoliciesOptions = {}): Promise<void> {
   // Validate every response before replacing any local policy.
   const downloads = await Promise.all(documents.map(async ({ name, heading }) => {
     const response = await fetchDocument(new URL(name, source), {

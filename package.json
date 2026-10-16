@@ -7,13 +7,16 @@
     "node": ">=24.15.0 <25"
   },
   "scripts": {
-    "policies:sync": "node scripts/sync-policies.mjs",
+    "policies:sync": "node scripts/sync-policies.mts",
     "dev": "pnpm policies:sync && vitepress dev",
     "build": "pnpm policies:sync && vitepress build",
     "preview": "vitepress preview",
-    "test": "node --test tests/*.test.mjs"
+    "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.mts"
   },
   "devDependencies": {
+    "@types/node": "24.19.1",
+    "typescript": "7.0.2",
     "vitepress": "1.6.4"
   }
 }
