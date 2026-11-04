@@ -9,6 +9,7 @@ export default defineConfig({
   lang: "en-US",
   base: "/",
   srcDir: "src",
+  cleanUrls: true,
   head: [
     ["link", { rel: "icon", type: "image/vnd.microsoft.icon", href: "/favicon.ico" }],
   ],
@@ -21,7 +22,7 @@ export default defineConfig({
       return [["meta", { name: "robots", content: "noindex" }]];
     }
 
-    const path = page.replace(/(^|\/)index\.md$/, "$1").replace(/\.md$/, ".html");
+    const path = page.replace(/(^|\/)index\.md$/, "$1").replace(/\.md$/, "");
     const url = new URL(path, website).href;
     const image = new URL("launcher-icon.png", website).href;
 
@@ -77,7 +78,7 @@ export default defineConfig({
     socialLinks: [{ icon: "github", link: repository }],
     outline: [2, 3],
     footer: {
-      message: 'Unofficial project, not affiliated with Mojang Studios or Microsoft.<br><a href="/privacy.html">Privacy Policy</a>',
+      message: 'Unofficial project, not affiliated with Mojang Studios or Microsoft.<br><a href="/privacy">Privacy Policy</a>',
       copyright: `Copyright © 2026 Mateus Neiva. Released under the <a href="${repository}/blob/main/LICENSE">MIT License</a>.`,
     },
   },

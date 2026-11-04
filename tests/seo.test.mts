@@ -28,7 +28,7 @@ for (const page of pages) {
     assert.ok(description);
     const canonicalTags = [...head.matchAll(/<link\b[^>]*rel="canonical"[^>]*>/g)];
     assert.equal(canonicalTags.length, 1);
-    const expectedUrl = new URL(page === "index.html" ? "" : page, website).href;
+    const expectedUrl = new URL(page === "index.html" ? "" : page.replace(/\.html$/, ""), website).href;
     assert.equal(attribute(canonicalTags[0][0], "href"), expectedUrl);
     assert.equal(metas.get("og:url"), expectedUrl);
     assert.equal(metas.get("og:type"), "website");
@@ -61,10 +61,10 @@ test("the favicon is published as a nonempty ICO file", async () => {
 test("the sitemap lists exactly the public page URLs", async () => {
   const sitemap = await readFile(new URL("sitemap.xml", dist), "utf8");
   const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(([, url]) => url);
-  const docs = ["", "getting-started.html", "profiles-and-mods.html", "troubleshooting.html", "contributing.html"];
+  const docs = ["", "getting-started", "profiles-and-mods", "troubleshooting", "contributing"];
   assert.deepEqual(
     urls.sort(),
-    [website, `${website}privacy.html`, `${website}terms.html`, ...docs.map((page) => `${website}docs/${page}`)].sort(),
+    [website, `${website}privacy`, `${website}terms`, ...docs.map((page) => `${website}docs/${page}`)].sort(),
   );
 });
 
