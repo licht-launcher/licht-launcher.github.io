@@ -16,7 +16,7 @@ Each profile keeps its own installed content, such as mods, separate from every 
 
 ## Not available yet
 
-Installing, updating and resolving dependencies for individual mods from inside the launcher is still in development. It is tracked as item 9.2 on the [roadmap](https://github.com/mateusneiva/licht-launcher/blob/main/docs/ROADMAP.md).
+Installing, updating and resolving dependencies for individual mods from inside the launcher is still in development. It is tracked as item 9.2 on the [roadmap](/docs/contributing/roadmap).
 
 Until then, [modpacks](/docs/modding/modpacks) are the way to get a complete set of mods into a profile.
 

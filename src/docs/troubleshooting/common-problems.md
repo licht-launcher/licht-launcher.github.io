@@ -11,7 +11,7 @@ If your problem is not here, see [Logs and reporting a problem](/docs/troublesho
 
 ### Windows does not show a verified publisher
 
-Windows publisher signing is not available yet, so this is expected for the installer. Download it from the [official releases page](https://github.com/mateusneiva/licht-launcher/releases/latest). Updates inside the launcher are verified with the launcher's signing key. See the [code signing policy](https://github.com/mateusneiva/licht-launcher/blob/main/docs/contributing/CODE_SIGNING.md).
+Windows publisher signing is not available yet, so this is expected for the installer. Download it from the [official releases page](https://github.com/mateusneiva/licht-launcher/releases/latest). Updates inside the launcher are verified with the launcher's signing key. See the [code signing policy](/docs/contributing/code-signing).
 
 ## Signing in
 

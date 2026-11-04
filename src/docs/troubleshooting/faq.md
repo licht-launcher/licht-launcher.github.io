@@ -43,7 +43,7 @@ No product analytics and no automatic crash-report uploads. The launcher still c
 
 ## Can I import profiles from another launcher?
 
-Not at the moment. Importing from other launchers is only an idea on the roadmap.
+Not at the moment. Importing from other launchers is only an idea on the [roadmap](/docs/contributing/roadmap).
 
 ## Can I install single mods from the launcher?
 
@@ -51,4 +51,4 @@ Not yet. Use [modpacks](/docs/modding/modpacks) for now. See [Managing installed
 
 ## How can I support the project?
 
-You can [sponsor the maintainer on GitHub](https://github.com/sponsors/mateusneiva) or contribute. See [Contributing](/docs/contributing).
+You can [sponsor the maintainer on GitHub](https://github.com/sponsors/mateusneiva) or contribute. See [Contributing](/docs/contributing/).

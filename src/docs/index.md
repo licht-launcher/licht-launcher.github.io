@@ -32,7 +32,7 @@ New here? Start with these.
 
 ## Project
 
-- [Contributing](/docs/contributing): development setup and the contribution workflow.
+- [Contributing](/docs/contributing/): development setup and the contribution workflow.
 - [Privacy Policy](/privacy) and [Terms of Use](/terms).
 
 Licht Launcher does not include a Minecraft license. You need the appropriate game rights to play.
