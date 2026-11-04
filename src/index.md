@@ -13,6 +13,9 @@ hero:
       text: Download on GitHub
       link: https://github.com/mateusneiva/licht-launcher/releases/latest
     - theme: alt
+      text: Documentation
+      link: /docs/
+    - theme: alt
       text: View source
       link: https://github.com/mateusneiva/licht-launcher
 

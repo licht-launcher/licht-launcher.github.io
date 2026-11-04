@@ -18,6 +18,7 @@ test("the homepage renders four feature cards with decorative icons", async () =
 test("primary actions retain their accessible labels and destinations", async () => {
   const html = await readFile(new URL("index.html", dist), "utf8");
   assert.match(html, /<a class="VPButton medium brand" href="https:\/\/github.com\/mateusneiva\/licht-launcher\/releases\/latest"[^>]*>Download on GitHub<\/a>/);
+  assert.match(html, /<a class="VPButton medium alt" href="\/docs\/"[^>]*>Documentation<\/a>/);
   assert.match(html, /<a class="VPButton medium alt" href="https:\/\/github.com\/mateusneiva\/licht-launcher"[^>]*>View source<\/a>/);
 });
 
@@ -62,12 +63,12 @@ for (const page of ["index.html", "privacy.html", "terms.html"]) {
   });
 }
 
-test("the production stylesheet includes all six local icon assets", async () => {
+test("the production stylesheet includes all seven local icon assets", async () => {
   const html = await readFile(new URL("index.html", dist), "utf8");
   const stylesheet = html.match(/href="([^"]*\/assets\/style\.[^"]+\.css)"/)?.[1];
   assert.ok(stylesheet);
   const css = await readFile(new URL(stylesheet.slice(1), dist), "utf8");
-  for (const name of ["instances", "mods", "platforms", "source", "download", "github"]) {
+  for (const name of ["instances", "mods", "platforms", "source", "download", "github", "docs"]) {
     assert.ok(css.includes(`/icons/${name}.svg`), `Missing icon in stylesheet: ${name}`);
     const icon = await readFile(new URL(`icons/${name}.svg`, dist), "utf8");
     assert.match(icon, /<svg[^>]*viewBox="0 0 24 24"/);

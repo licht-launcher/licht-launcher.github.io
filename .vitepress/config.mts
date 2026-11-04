@@ -48,10 +48,25 @@ export default defineConfig({
     logo: { src: "/launcher-icon.png", alt: "" },
     nav: [
       { text: "Home", link: "/" },
+      { text: "Docs", link: "/docs/", activeMatch: "/docs/" },
       { text: "Privacy", link: "/privacy" },
       { text: "Terms", link: "/terms" },
       { text: "Download", link: `${repository}/releases/latest` },
     ],
+    sidebar: {
+      "/docs/": [
+        {
+          text: "Documentation",
+          items: [
+            { text: "Overview", link: "/docs/" },
+            { text: "Getting started", link: "/docs/getting-started" },
+            { text: "Profiles and mods", link: "/docs/profiles-and-mods" },
+            { text: "Troubleshooting", link: "/docs/troubleshooting" },
+            { text: "Contributing", link: "/docs/contributing" },
+          ],
+        },
+      ],
+    },
     socialLinks: [{ icon: "github", link: repository }],
     outline: [2, 3],
     footer: {

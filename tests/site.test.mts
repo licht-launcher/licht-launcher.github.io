@@ -4,7 +4,16 @@ import test from "node:test";
 
 const dist = new URL("../.vitepress/dist/", import.meta.url);
 const base = "/";
-const pages = ["index.html", "privacy.html", "terms.html"];
+const pages = [
+  "index.html",
+  "privacy.html",
+  "terms.html",
+  "docs/index.html",
+  "docs/getting-started.html",
+  "docs/profiles-and-mods.html",
+  "docs/troubleshooting.html",
+  "docs/contributing.html",
+];
 
 for (const page of pages) {
   test(`${page} publishes working project-relative links and assets`, async () => {
@@ -18,9 +27,10 @@ for (const page of pages) {
       if (/^(?:[a-z]+:|\/\/)/i.test(value)) continue;
       const url = new URL(value, `https://example.test${base}${page}`);
       assert.ok(url.pathname.startsWith(base), `${page}: outside project base: ${value}`);
-      const relative = url.pathname.slice(base.length) || "index.html";
-      const target = await readFile(new URL(relative, dist));
-      if (attribute === "href" && url.hash && relative.endsWith(".html")) {
+      const relative = url.pathname.slice(base.length);
+      const targetPath = relative === "" || relative.endsWith("/") ? `${relative}index.html` : relative;
+      const target = await readFile(new URL(targetPath, dist));
+      if (attribute === "href" && url.hash && targetPath.endsWith(".html")) {
         assert.ok(
           target.toString().includes(`id="${decodeURIComponent(url.hash.slice(1))}"`),
           `${page}: missing anchor: ${value}`,
