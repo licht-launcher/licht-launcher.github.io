@@ -21,7 +21,7 @@ New here? Start with these.
 - [Open an issue](/docs/troubleshooting/open-an-issue)
 - [FAQ](/docs/troubleshooting/faq)
 
-## Reference
+## References
 
 - [Compatibility](/docs/reference/compatibility): supported systems and Minecraft versions.
 - [Game runtime](/docs/reference/game-runtime): modloaders, Java runtime, libraries and natives.
