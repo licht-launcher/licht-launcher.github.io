@@ -21,7 +21,7 @@ Natives (the platform libraries the game needs) are selected for `x86` and `x86_
 
 The launcher reads Mojang's version manifest, which includes releases, snapshots, old betas and old alphas. Version ids are treated as opaque strings, such as `1.5.2` or `26.3`.
 
-Launching was checked on Windows with these versions: 26.3, 1.21.11, 1.20.1, 1.12.2, 1.8.9, 1.7.2 and 1.5.2. That is a sample, not a guarantee for every version. Each version's Java requirement is described in [Java runtime](/docs/reference/java-runtime).
+Launching was checked on Windows with these versions: 26.3, 1.21.11, 1.20.1, 1.12.2, 1.8.9, 1.7.2 and 1.5.2. That is a sample, not a guarantee for every version. Each version's Java requirement is described in [Java runtime](/docs/reference/game-runtime#java-runtime).
 
 ## How versions differ
 
@@ -48,7 +48,7 @@ An offline profile gets a stable player identity from its username, so the same 
 - On Linux, graphical launch has not been re-checked.
 - In some very old versions, such as 1.5.2, one session argument is still passed unfilled.
 - Java 17 and older write the whole game log in one encoding. Mixed output can show garbled characters, for example accents, and unsupported Windows code pages are decoded leniently.
-- The version checks above were made on Windows and do not cover every Minecraft and loader combination. See [Modloaders](/docs/reference/modloaders).
+- The version checks above were made on Windows and do not cover every Minecraft and loader combination. See [Modloaders](/docs/reference/game-runtime#modloaders).
 
 ## Technical details
 

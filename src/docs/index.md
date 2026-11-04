@@ -28,8 +28,7 @@ New here? Start with these.
 ## Reference
 
 - [Compatibility](/docs/reference/compatibility): supported systems and Minecraft versions.
-- [Modloaders](/docs/reference/modloaders): Fabric, Quilt, Forge and NeoForge.
-- [Java runtime](/docs/reference/java-runtime): which Java each version needs.
+- [Game runtime](/docs/reference/game-runtime): modloaders, Java runtime, libraries and natives.
 - [Data and storage](/docs/reference/data-and-storage): what is stored and where.
 - [Network requests](/docs/reference/network-requests): which services are contacted.
 - [Authentication](/docs/reference/authentication): how Microsoft sign-in works.
