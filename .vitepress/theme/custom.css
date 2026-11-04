@@ -134,3 +134,7 @@
 .VPHomeHero .VPButton.alt {
   --home-icon: url("/icons/github.svg");
 }
+
+.VPHomeHero .VPButton.alt[href="/docs/"] {
+  --home-icon: url("/icons/docs.svg");
+}
