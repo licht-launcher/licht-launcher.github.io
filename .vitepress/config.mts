@@ -93,6 +93,7 @@ export default defineConfig({
       { text: "Privacy Policy", link: "/privacy-policy" },
       { text: "Terms of Use", link: "/terms-of-use" },
       { text: "Download", link: `${repository}/releases/latest` },
+      { text: kofiButton, link: kofi },
     ],
     sidebar: {
       "/docs/": [
@@ -138,7 +139,7 @@ export default defineConfig({
     },
     outline: [2, 3],
     footer: {
-      message: `Unofficial project, not affiliated with Mojang Studios or Microsoft.<br><a href="/privacy-policy">Privacy Policy</a> · <a href="/terms-of-use">Terms of Use</a><br><a class="kofi-link" href="${kofi}" target="_blank" rel="noopener">${kofiButton}</a>`,
+      message: `Unofficial project, not affiliated with Mojang Studios or Microsoft.<br><a href="/privacy-policy">Privacy Policy</a> · <a href="/terms-of-use">Terms of Use</a>`,
       copyright: `Copyright © 2026 Mateus Neiva. Released under the <a href="${repository}/blob/main/LICENSE">MIT License</a>.`,
     },
   },

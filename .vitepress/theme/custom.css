@@ -164,12 +164,6 @@
   width: auto;
 }
 
-.VPFooter .kofi-link {
-  display: inline-block;
-  margin-top: 12px;
-  text-decoration: none;
-}
-
 .VPSidebarItem.level-0 > .item > .link[href="https://ko-fi.com/mateusneiva"] {
   padding-top: 16px;
 }
@@ -182,4 +176,8 @@
 .VPFooter .copyright {
   order: -1;
   margin-bottom: 8px;
+}
+
+.VPNavBarMenuLink .kofi-button {
+  vertical-align: middle;
 }

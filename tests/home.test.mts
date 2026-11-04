@@ -58,12 +58,14 @@ for (const page of ["index.html", "privacy-policy.html", "terms-of-use.html"]) {
 const kofiLink = /<a [^>]*href="https:\/\/ko-fi.com\/mateusneiva"[^>]*>[\s\S]*?<img [^>]*src="\/kofi-button.png"[^>]*alt="Buy me a coffee on Ko-fi"[^>]*>/;
 
 for (const page of ["index.html", "privacy-policy.html", "terms-of-use.html"]) {
-  test(`${page} footer links to Ko-fi with the locally hosted button`, async () => {
+  test(`${page} navbar links to Ko-fi and the footer does not`, async () => {
     const html = await readFile(new URL(page, dist), "utf8");
+    const navbar = html.match(/<nav [^>]*class="VPNavBarMenu[\s\S]*?<\/nav>/)?.[0];
     const footer = html.match(/<footer class="VPFooter"[\s\S]*?<\/footer>/)?.[0];
+    assert.ok(navbar);
     assert.ok(footer);
-    assert.match(footer, kofiLink);
-    assert.match(footer, /<a class="kofi-link" href="https:\/\/ko-fi.com\/mateusneiva" target="_blank" rel="noopener">/);
+    assert.match(navbar, kofiLink);
+    assert.doesNotMatch(footer, /ko-fi/i);
   });
 }
 
