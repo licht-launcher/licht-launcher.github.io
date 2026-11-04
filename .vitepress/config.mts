@@ -56,7 +56,6 @@ export default defineConfig({
     ],
     sidebar: {
       "/docs/": [
-        { text: "Documentation home", link: "/docs/" },
         {
           text: "Getting Started",
           items: [
