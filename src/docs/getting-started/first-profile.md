@@ -27,7 +27,7 @@ Select **Create instance** to open its menu:
 The new profile opens in your library and the launcher starts preparing its game files. When it is ready, select **Play**. If creation fails, the launcher shows an error message and nothing is added to the library.
 
 ::: tip Choosing a platform
-Pick **Vanilla** to play the unmodified game. Pick a modloader only when you plan to use mods, and match what the mods or modpack require. See [Modloaders](/docs/reference/game-runtime#modloaders) for how each one is handled.
+Pick **Vanilla** to play the unmodified game. Pick a modloader only when you plan to use mods, and match what the mods or modpack require. See [Modloaders](/docs/references/game-runtime#modloaders) for how each one is handled.
 :::
 
 ## Create a profile from a pack file
@@ -76,4 +76,4 @@ Profiles hold your worlds and other user files. Back up anything you care about 
 
 ## Next
 
-- [Modloaders](/docs/reference/game-runtime#modloaders)
+- [Modloaders](/docs/references/game-runtime#modloaders)

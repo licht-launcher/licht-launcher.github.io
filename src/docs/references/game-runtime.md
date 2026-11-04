@@ -101,7 +101,7 @@ Modloaders add their own libraries. Fabric and Quilt profiles list them in the l
 
 Natives are the platform libraries the game needs, such as the ones for graphics and audio. The launcher selects them for your operating system, for `x86` and `x86_64`. Arm64 is not supported.
 
-Minecraft 26.x lays natives out differently from older versions, and the launcher adjusts the library path to match. See [Compatibility](/docs/reference/compatibility).
+Minecraft 26.x lays natives out differently from older versions, and the launcher adjusts the library path to match. See [Compatibility](/docs/references/compatibility).
 
 ## Technical details
 
