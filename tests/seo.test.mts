@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
-import { docsSources, docsUrlPath } from "./docs-pages.mts";
+import { docsHtmlFile, docsSources, docsUrlPath } from "./docs-pages.mts";
 
 const dist = new URL("../.vitepress/dist/", import.meta.url);
 const website = "https://licht-launcher.github.io/";
@@ -54,6 +54,19 @@ for (const page of pages) {
     assert.match(head, /<link[^>]*rel="manifest"[^>]*href="\/site.webmanifest"/);
   });
 }
+
+test("every public page has its own meta description", async () => {
+  const files = [...pages, ...(await docsSources()).map(docsHtmlFile)];
+  const seen = new Map<string, string>();
+  for (const file of files) {
+    const html = await readFile(new URL(file, dist), "utf8");
+    const description = html.match(/<meta name="description" content="([^"]+)"/)?.[1];
+    assert.ok(description, `${file} has no meta description`);
+    assert.ok(description.length >= 50 && description.length <= 160, `${file} description length is ${description.length}`);
+    assert.equal(seen.get(description), undefined, `${file} repeats the description of ${seen.get(description)}`);
+    seen.set(description, file);
+  }
+});
 
 test("every page declares light and dark theme colors", async () => {
   for (const page of pages) {
