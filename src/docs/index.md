@@ -15,13 +15,8 @@ New here? Start with these.
 - [Install](/docs/getting-started/install): download and install on Windows or Linux.
 - [Sign in](/docs/getting-started/sign-in): Microsoft account or offline profile.
 - [Create your first profile](/docs/getting-started/first-profile): prepare a game and press Play.
+- [Modpacks](/docs/getting-started/modpacks): import from Modrinth and CurseForge.
 - [Updates and uninstall](/docs/getting-started/updates-and-uninstall)
-
-## Modding
-
-- [Modloaders](/docs/modding/modloaders): Fabric, Quilt, Forge and NeoForge.
-- [Modpacks](/docs/modding/modpacks): import from Modrinth and CurseForge.
-- [Managing installed content](/docs/modding/managing-content)
 
 ## Troubleshooting
 
@@ -33,6 +28,7 @@ New here? Start with these.
 ## Reference
 
 - [Compatibility](/docs/reference/compatibility): supported systems and Minecraft versions.
+- [Modloaders](/docs/reference/modloaders): Fabric, Quilt, Forge and NeoForge.
 - [Java runtime](/docs/reference/java-runtime): which Java each version needs.
 - [Data and storage](/docs/reference/data-and-storage): what is stored and where.
 - [Network requests](/docs/reference/network-requests): which services are contacted.

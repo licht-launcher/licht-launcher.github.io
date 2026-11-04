@@ -1,6 +1,6 @@
 ---
 title: Development setup
-description: Install the tools, run the launcher in development and use the licht CLI.
+description: Install the tools, run the launcher in development, follow the conventions and run the checks before a pull request.
 ---
 
 # Development setup
@@ -70,11 +70,49 @@ cargo run -p licht-core --features cli --bin licht -- launch --version 1.20.1 --
 
 ## Environment variables
 
-- `LICHT_CURSEFORGE_API_KEY`: enables CurseForge modpack search and import. See [Modpacks](/docs/modding/modpacks#curseforge).
+- `LICHT_CURSEFORGE_API_KEY`: enables CurseForge modpack search and import. See [Modpacks](/docs/getting-started/modpacks#curseforge).
 - `LICHT_DATA_DIR`: overrides the profile folder, as described above.
 
 For the details of each area, see the launcher's [runtime](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/RUNTIME.md), [storage](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/STORAGE.md) and [compatibility](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/COMPATIBILITY.md) notes.
 
-## Next
+## Conventions
 
-Read the [code and testing guidelines](/docs/contributing/guidelines) before you submit a pull request.
+- Follow the surrounding style and keep changes focused. Avoid unrelated refactoring and speculative abstractions.
+- Write code, comments, commit messages and pull request descriptions in English. Interface copy is English too.
+- Keep Minecraft logic in `crates/licht-core`, Tauri commands and events in the thin `src-tauri` layer, and UI logic in `src`. See [Architecture](/docs/contributing/architecture).
+- Use strict TypeScript and the existing design-system components and theme tokens.
+- Keep the interface keyboard-accessible and compatible with Windows WebView2 and Linux WebKitGTK.
+- Generate shared Rust and TypeScript types with the existing `ts-rs` process. Do not duplicate them by hand.
+- Keep tokens in the operating system keyring and out of logs.
+- Document changes to external requests, local storage or data handling in the [Privacy Policy](https://github.com/mateusneiva/licht-launcher/blob/main/PRIVACY.md).
+
+## Tests
+
+- Reproduce a bug with a failing behavioral test before fixing it.
+- Cover new core logic and meaningful UI interactions with automated tests.
+- Automated tests must not depend on the network or a real Microsoft account.
+- Reuse existing fixtures. Include third-party test material only when its redistribution is permitted, and document its source.
+- Do not submit proprietary game binaries, textures, sounds or private account responses.
+
+## Checks before a pull request
+
+Run the checks that apply to your change:
+
+```sh
+pnpm lint
+pnpm typecheck
+pnpm test
+cargo fmt --all --check
+cargo clippy --workspace --all-targets --locked -- -D warnings
+cargo test --workspace --locked
+```
+
+For build or packaging changes, also run the release build from [Run the app](#run-the-app).
+
+::: warning Report honestly
+Report checks you could not run and any real failures. Do not disable lint rules or weaken tests to get a passing result.
+:::
+
+## Continuous integration
+
+CI checks frontend lint, types and tests, Rust formatting, Clippy and tests, and builds Tauri on Windows and Ubuntu. Build and test coverage is separate from manual graphical validation, so mention what you tried by hand in your pull request.

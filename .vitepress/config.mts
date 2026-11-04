@@ -65,15 +65,8 @@ export default defineConfig({
             { text: "Install", link: "/docs/getting-started/install" },
             { text: "Sign in", link: "/docs/getting-started/sign-in" },
             { text: "Create your first profile", link: "/docs/getting-started/first-profile" },
+            { text: "Modpacks", link: "/docs/getting-started/modpacks" },
             { text: "Updates and uninstall", link: "/docs/getting-started/updates-and-uninstall" },
-          ],
-        },
-        {
-          text: "Modding",
-          items: [
-            { text: "Modloaders", link: "/docs/modding/modloaders" },
-            { text: "Modpacks", link: "/docs/modding/modpacks" },
-            { text: "Managing installed content", link: "/docs/modding/managing-content" },
           ],
         },
         {
@@ -89,6 +82,7 @@ export default defineConfig({
           text: "Reference",
           items: [
             { text: "Compatibility", link: "/docs/reference/compatibility" },
+            { text: "Modloaders", link: "/docs/reference/modloaders" },
             { text: "Java runtime", link: "/docs/reference/java-runtime" },
             { text: "Data and storage", link: "/docs/reference/data-and-storage" },
             { text: "Network requests", link: "/docs/reference/network-requests" },
@@ -100,18 +94,10 @@ export default defineConfig({
           items: [
             { text: "How to contribute", link: "/docs/contributing/" },
             { text: "Development setup", link: "/docs/contributing/development" },
-            { text: "Code and testing guidelines", link: "/docs/contributing/guidelines" },
             { text: "Architecture", link: "/docs/contributing/architecture" },
             { text: "Releasing", link: "/docs/contributing/releasing" },
             { text: "Code signing policy", link: "/docs/contributing/code-signing" },
             { text: "Roadmap", link: "/docs/contributing/roadmap" },
-          ],
-        },
-        {
-          text: "Legal",
-          items: [
-            { text: "Privacy Policy", link: "/privacy" },
-            { text: "Terms of Use", link: "/terms" },
           ],
         },
         { text: kofiButton, link: kofi },
