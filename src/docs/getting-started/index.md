@@ -8,7 +8,7 @@ description: What Licht Launcher is, what it runs on and where to start.
 Licht Launcher is a free, open-source launcher for **Minecraft: Java Edition** on **Windows and Linux** (64-bit). It keeps your game versions, modloaders and modpacks in separate profiles, and prepares the Java runtime each game needs.
 
 ::: warning Early Release
-Licht Launcher is in active development. Features and compatibility are still being refined, and you may run into bugs. [Reporting a problem](/docs/troubleshooting/logs-and-reporting) helps shape the launcher.
+Licht Launcher is in active development. Features and compatibility are still being refined, and you may run into bugs. [Reporting a problem](/docs/troubleshooting/open-an-issue) helps shape the launcher.
 :::
 
 ## What you need

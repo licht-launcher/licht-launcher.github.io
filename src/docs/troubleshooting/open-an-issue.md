@@ -1,9 +1,19 @@
 ---
-title: Logs and reporting a problem
+title: Open an issue
 description: Where to find logs, how to share them safely and how to report an issue.
 ---
 
-# Logs and reporting a problem
+# Open an issue
+
+## Report a problem
+
+[Open an issue](https://github.com/mateusneiva/licht-launcher/issues) on GitHub. Issues are public, so keep personal data out of them. Include:
+
+- your launcher version and operating system;
+- the Minecraft version, and the loader and its version if you use one;
+- what you expected and what happened;
+- the steps to reproduce it;
+- the relevant part of the log, redacted.
 
 ## Where logs are
 
@@ -18,16 +28,6 @@ Licht Launcher does not upload logs or crash reports automatically.
 ::: warning Remove private information
 Logs can contain your player name, local file paths, server addresses and text printed by third-party code. Review and redact logs and screenshots before sharing them. Never send passwords or tokens.
 :::
-
-## Report a problem
-
-[Open an issue](https://github.com/mateusneiva/licht-launcher/issues) on GitHub. Issues are public, so keep personal data out of them. Include:
-
-- your launcher version and operating system;
-- the Minecraft version, and the loader and its version if you use one;
-- what you expected and what happened;
-- the steps to reproduce it;
-- the relevant part of the log, redacted.
 
 ## Private reports
 
