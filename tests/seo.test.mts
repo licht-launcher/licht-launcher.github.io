@@ -55,6 +55,29 @@ for (const page of pages) {
   });
 }
 
+test("every page declares light and dark theme colors", async () => {
+  for (const page of pages) {
+    const html = await readFile(new URL(page, dist), "utf8");
+    assert.match(html, /<meta name="theme-color" content="#ffffff" media="\(prefers-color-scheme: light\)"/);
+    assert.match(html, /<meta name="theme-color" content="#1b1b1f" media="\(prefers-color-scheme: dark\)"/);
+  }
+});
+
+test("the home page publishes WebSite and SoftwareApplication JSON-LD, other pages do not", async () => {
+  const extract = async (page: string) => {
+    const html = await readFile(new URL(page, dist), "utf8");
+    return [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(([, json]) =>
+      JSON.parse(json) as { "@type": string; url: string; operatingSystem?: string }[],
+    );
+  };
+  const home = await extract("index.html");
+  assert.equal(home.length, 1);
+  assert.deepEqual(home[0].map((item) => item["@type"]), ["WebSite", "SoftwareApplication"]);
+  assert.ok(home[0].every((item) => item.url === website));
+  assert.equal(home[0][1].operatingSystem, "Windows, Linux");
+  assert.deepEqual(await extract("privacy.html"), []);
+});
+
 test("the icon set and web manifest are published with matching sizes", async () => {
   for (const [file, size] of [["apple-touch-icon.png", 180], ["icon-192.png", 192]] as const) {
     const image = await readFile(new URL(file, dist));

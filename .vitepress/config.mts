@@ -1,4 +1,4 @@
-import { defineConfig } from "vitepress";
+import { defineConfig, type HeadConfig } from "vitepress";
 
 const repository = "https://github.com/mateusneiva/licht-launcher";
 const website = "https://licht-launcher.github.io/";
@@ -17,6 +17,8 @@ export default defineConfig({
     ["link", { rel: "icon", type: "image/png", sizes: "192x192", href: "/icon-192.png" }],
     ["link", { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
     ["link", { rel: "manifest", href: "/site.webmanifest" }],
+    ["meta", { name: "theme-color", content: "#ffffff", media: "(prefers-color-scheme: light)" }],
+    ["meta", { name: "theme-color", content: "#1b1b1f", media: "(prefers-color-scheme: dark)" }],
   ],
   sitemap: {
     hostname: website,
@@ -31,7 +33,41 @@ export default defineConfig({
     const url = new URL(path, website).href;
     const image = new URL("launcher-icon.png", website).href;
 
+    const structuredData =
+      page === "index.md"
+        ? [
+            [
+              "script",
+              { type: "application/ld+json" },
+              JSON.stringify([
+                {
+                  "@context": "https://schema.org",
+                  "@type": "WebSite",
+                  name: "Licht Launcher",
+                  url: website,
+                },
+                {
+                  "@context": "https://schema.org",
+                  "@type": "SoftwareApplication",
+                  name: "Licht Launcher",
+                  description,
+                  url: website,
+                  image,
+                  applicationCategory: "GameApplication",
+                  operatingSystem: "Windows, Linux",
+                  isAccessibleForFree: true,
+                  license: `${repository}/blob/main/LICENSE`,
+                  codeRepository: repository,
+                  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+                  author: { "@type": "Person", name: "Mateus Neiva" },
+                },
+              ]),
+            ] as HeadConfig,
+          ]
+        : [];
+
     return [
+      ...structuredData,
       ["link", { rel: "canonical", href: url }],
       ["meta", { property: "og:type", content: "website" }],
       ["meta", { property: "og:site_name", content: "Licht Launcher" }],
