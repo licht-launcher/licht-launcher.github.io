@@ -13,7 +13,6 @@ New here? Start with these.
 
 - [Overview](/docs/getting-started/): what the launcher is and what you need.
 - [Install](/docs/getting-started/install): download and install on Windows or Linux.
-- [Sign in](/docs/getting-started/sign-in): Microsoft account or offline profile.
 - [Create your first profile](/docs/getting-started/first-profile): prepare a game and press Play.
 - [Modpacks](/docs/getting-started/modpacks): import from Modrinth and CurseForge.
 - [Updates and uninstall](/docs/getting-started/updates-and-uninstall)

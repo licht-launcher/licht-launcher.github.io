@@ -27,11 +27,11 @@ Features and compatibility are still being refined, and you may find bugs. Repor
 
 ## Does Licht Launcher see my Microsoft password?
 
-No. Sign-in happens in your browser on Microsoft's own pages. See [Sign in](/docs/getting-started/sign-in).
+No. Sign-in happens in your browser on Microsoft's own pages.
 
 ## Can I play without a Microsoft account?
 
-Yes, with an offline profile. It does not authenticate you with online services. See [Sign in](/docs/getting-started/sign-in#offline-profile).
+Yes, with an offline profile. It does not authenticate you with online services.
 
 ## Do I need to install Java?
 

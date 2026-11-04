@@ -33,4 +33,4 @@ Licht Launcher keeps your Microsoft session in the system credential store, whic
 
 ## After installing
 
-Open the launcher, then [sign in](/docs/getting-started/sign-in) and [create a profile](/docs/getting-started/first-profile).
+Open the launcher, then [create a profile](/docs/getting-started/first-profile).
