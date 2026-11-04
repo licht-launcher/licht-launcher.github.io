@@ -65,3 +65,11 @@ test("the install page publishes the latest release downloads and its version wi
     assert.ok(url.includes(`/v${version}/`) && url.includes(`-${version}-`), `download is not for ${version}: ${url}`);
   }
 });
+
+test("the navbar Ko-fi button is a block so it centers in the navbar instead of sitting on the text baseline", async () => {
+  const html = await readFile(new URL("index.html", dist), "utf8");
+  const stylesheet = html.match(/href="([^"]*\/assets\/style\.[^"]+\.css)"/)?.[1];
+  assert.ok(stylesheet);
+  const css = await readFile(new URL(stylesheet.slice(1), dist), "utf8");
+  assert.match(css, /\.VPNavBarMenuLink \.kofi-button\{display:block\}/);
+});

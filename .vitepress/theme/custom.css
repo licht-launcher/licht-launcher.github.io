@@ -175,5 +175,5 @@
 }
 
 .VPNavBarMenuLink .kofi-button {
-  vertical-align: middle;
+  display: block;
 }
