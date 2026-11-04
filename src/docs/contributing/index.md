@@ -50,4 +50,4 @@ Respect copyright and licenses. Original contributions are submitted under the p
 
 ## Conduct and contact
 
-Be respectful, constructive and specific. For project questions, contact the maintainer through GitHub or [mateus.fneiva@gmail.com](mailto:mateus.fneiva@gmail.com). The user-facing policies are the [Privacy Policy](/privacy) and the [Terms of Use](/terms).
+Be respectful, constructive and specific. For project questions, contact the maintainer through GitHub or [mateus.fneiva@gmail.com](mailto:mateus.fneiva@gmail.com). The user-facing policies are the [Privacy Policy](/privacy-policy) and the [Terms of Use](/terms-of-use).

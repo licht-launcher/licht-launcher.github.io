@@ -35,7 +35,7 @@ No. The launcher downloads the Java runtime each game version needs. See [Create
 
 ## Does it collect analytics or crash reports?
 
-No product analytics and no automatic crash-report uploads. The launcher still contacts services it needs, such as Mojang, Microsoft, mod providers and GitHub. See the [Privacy Policy](/privacy).
+No product analytics and no automatic crash-report uploads. The launcher still contacts services it needs, such as Mojang, Microsoft, mod providers and GitHub. See the [Privacy Policy](/privacy-policy).
 
 ## Can I import profiles from another launcher?
 

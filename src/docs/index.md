@@ -35,6 +35,6 @@ New here? Start with these.
 
 ## Legal
 
-- [Privacy Policy](/privacy) and [Terms of Use](/terms).
+- [Privacy Policy](/privacy-policy) and [Terms of Use](/terms-of-use).
 
 Licht Launcher does not include a Minecraft license. You need the appropriate game rights to play.

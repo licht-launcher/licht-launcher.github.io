@@ -89,11 +89,11 @@ export default defineConfig({
   themeConfig: {
     logo: { src: "/launcher-icon.png", alt: "" },
     nav: [
-      { text: "Home", link: "/" },
       { text: "Docs", link: "/docs/", activeMatch: "/docs/" },
-      { text: "Privacy", link: "/privacy" },
-      { text: "Terms", link: "/terms" },
+      { text: "Privacy Policy", link: "/privacy-policy" },
+      { text: "Terms of Use", link: "/terms-of-use" },
       { text: "Download", link: `${repository}/releases/latest` },
+      { text: kofiButton, link: kofi },
     ],
     sidebar: {
       "/docs/": [
@@ -134,13 +134,11 @@ export default defineConfig({
             { text: "Roadmap", link: "/docs/contributing/roadmap" },
           ],
         },
-        { text: kofiButton, link: kofi },
       ],
     },
-    socialLinks: [{ icon: "github", link: repository }],
     outline: [2, 3],
     footer: {
-      message: `Unofficial project, not affiliated with Mojang Studios or Microsoft.<br><a href="/privacy">Privacy Policy</a><br><a class="kofi-link" href="${kofi}" target="_blank" rel="noopener">${kofiButton}</a>`,
+      message: `Unofficial project, not affiliated with Mojang Studios or Microsoft.<br><a href="/privacy-policy">Privacy Policy</a> · <a href="/terms-of-use">Terms of Use</a>`,
       copyright: `Copyright © 2026 Mateus Neiva. Released under the <a href="${repository}/blob/main/LICENSE">MIT License</a>.`,
     },
   },
@@ -149,8 +147,8 @@ export default defineConfig({
       // Rewrite repository-relative policy links before VitePress resolves them.
       md.core.ruler.after("inline", "policy-links", (state) => {
         const destinations: Record<string, string> = {
-          "PRIVACY.md": "/privacy.md",
-          "TERMS.md": "/terms.md",
+          "PRIVACY.md": "/privacy-policy.md",
+          "TERMS.md": "/terms-of-use.md",
           "README.md": `${repository}/blob/main/README.md`,
           LICENSE: `${repository}/blob/main/LICENSE`,
         };
