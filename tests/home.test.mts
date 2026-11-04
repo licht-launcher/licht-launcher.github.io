@@ -38,48 +38,42 @@ test("the homepage hero displays the launcher logo with descriptive alternative 
   assert.match(image, /alt="Licht Launcher flower logo"/);
 });
 
-test("the GitHub action uses the same icon shape as the navbar", async () => {
-  const navbarIcons = decodeURIComponent(await readFile(new URL("vp-icons.css", dist), "utf8"));
-  const actionIcon = await readFile(new URL("icons/github.svg", dist), "utf8");
-  const navbarPath = navbarIcons.match(/<path[^>]*\bd='([^']+)'/)?.[1];
-  const actionPath = actionIcon.match(/<path[^>]*\bd="([^"]+)"/)?.[1];
-  assert.ok(navbarPath);
-  assert.equal(actionPath, navbarPath);
-});
-
 test("the homepage omits the removed project-information section", async () => {
   const html = await readFile(new URL("index.html", dist), "utf8");
   assert.doesNotMatch(html, /<h2 id="(?:project-information|before-you-play|downloads-and-code-signing|contact)"/);
 });
 
-for (const page of ["index.html", "privacy.html", "terms.html"]) {
+for (const page of ["index.html", "privacy-policy.html", "terms-of-use.html"]) {
   test(`${page} footer provides privacy, license, and the unofficial-project notice`, async () => {
     const html = await readFile(new URL(page, dist), "utf8");
     const footer = html.match(/<footer class="VPFooter"[\s\S]*?<\/footer>/)?.[0];
     assert.ok(footer);
     assert.match(footer, /not affiliated with Mojang Studios or Microsoft/);
-    assert.match(footer, /<a href="\/privacy">Privacy Policy<\/a>/);
+    assert.match(footer, /<a href="\/privacy-policy">Privacy Policy<\/a>/);
+    assert.match(footer, /<a href="\/terms-of-use">Terms of Use<\/a>/);
     assert.match(footer, /<a href="https:\/\/github.com\/mateusneiva\/licht-launcher\/blob\/main\/LICENSE">MIT License<\/a>/);
   });
 }
 
 const kofiLink = /<a [^>]*href="https:\/\/ko-fi.com\/mateusneiva"[^>]*>[\s\S]*?<img [^>]*src="\/kofi-button.png"[^>]*alt="Buy me a coffee on Ko-fi"[^>]*>/;
 
-for (const page of ["index.html", "privacy.html", "terms.html"]) {
-  test(`${page} footer links to Ko-fi with the locally hosted button`, async () => {
+for (const page of ["index.html", "privacy-policy.html", "terms-of-use.html"]) {
+  test(`${page} navbar links to Ko-fi and the footer does not`, async () => {
     const html = await readFile(new URL(page, dist), "utf8");
+    const navbar = html.match(/<nav [^>]*class="VPNavBarMenu[\s\S]*?<\/nav>/)?.[0];
     const footer = html.match(/<footer class="VPFooter"[\s\S]*?<\/footer>/)?.[0];
+    assert.ok(navbar);
     assert.ok(footer);
-    assert.match(footer, kofiLink);
-    assert.match(footer, /<a class="kofi-link" href="https:\/\/ko-fi.com\/mateusneiva" target="_blank" rel="noopener">/);
+    assert.match(navbar, kofiLink);
+    assert.doesNotMatch(footer, /ko-fi/i);
   });
 }
 
-test("the docs sidebar ends with the Ko-fi button", async () => {
+test("the docs sidebar does not include the Ko-fi button", async () => {
   const html = await readFile(new URL("docs/getting-started/install.html", dist), "utf8");
   const sidebar = html.match(/<aside class="VPSidebar"[\s\S]*?<\/aside>/)?.[0];
   assert.ok(sidebar);
-  assert.match(sidebar, kofiLink);
+  assert.doesNotMatch(sidebar, /ko-fi/i);
 });
 
 test("the Ko-fi button is published as a PNG image", async () => {

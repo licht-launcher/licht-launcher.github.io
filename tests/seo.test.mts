@@ -5,7 +5,7 @@ import { docsSources, docsUrlPath } from "./docs-pages.mts";
 
 const dist = new URL("../.vitepress/dist/", import.meta.url);
 const website = "https://licht-launcher.github.io/";
-const pages = ["index.html", "privacy.html", "terms.html"];
+const pages = ["index.html", "privacy-policy.html", "terms-of-use.html"];
 
 function attribute(tag: string, name: string): string {
   const value = tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1];
@@ -49,8 +49,50 @@ for (const page of pages) {
     assert.equal(image.readUInt32BE(16).toString(), metas.get("og:image:width"));
     assert.equal(image.readUInt32BE(20).toString(), metas.get("og:image:height"));
     assert.match(head, /<link[^>]*rel="icon"[^>]*href="\/favicon.ico"/);
+    assert.match(head, /<link[^>]*rel="icon"[^>]*href="\/icon-192.png"/);
+    assert.match(head, /<link[^>]*rel="apple-touch-icon"[^>]*href="\/apple-touch-icon.png"/);
+    assert.match(head, /<link[^>]*rel="manifest"[^>]*href="\/site.webmanifest"/);
   });
 }
+
+test("every page declares light and dark theme colors", async () => {
+  for (const page of pages) {
+    const html = await readFile(new URL(page, dist), "utf8");
+    assert.match(html, /<meta name="theme-color" content="#ffffff" media="\(prefers-color-scheme: light\)"/);
+    assert.match(html, /<meta name="theme-color" content="#1b1b1f" media="\(prefers-color-scheme: dark\)"/);
+  }
+});
+
+test("the home page publishes WebSite and SoftwareApplication JSON-LD, other pages do not", async () => {
+  const extract = async (page: string) => {
+    const html = await readFile(new URL(page, dist), "utf8");
+    return [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(([, json]) =>
+      JSON.parse(json) as { "@type": string; url: string; operatingSystem?: string }[],
+    );
+  };
+  const home = await extract("index.html");
+  assert.equal(home.length, 1);
+  assert.deepEqual(home[0].map((item) => item["@type"]), ["WebSite", "SoftwareApplication"]);
+  assert.ok(home[0].every((item) => item.url === website));
+  assert.equal(home[0][1].operatingSystem, "Windows, Linux");
+  assert.deepEqual(await extract("privacy-policy.html"), []);
+});
+
+test("the icon set and web manifest are published with matching sizes", async () => {
+  for (const [file, size] of [["apple-touch-icon.png", 180], ["icon-192.png", 192]] as const) {
+    const image = await readFile(new URL(file, dist));
+    assert.equal(image.readUInt32BE(16), size);
+    assert.equal(image.readUInt32BE(20), size);
+  }
+  const manifest = JSON.parse(await readFile(new URL("site.webmanifest", dist), "utf8")) as {
+    name: string;
+    icons: { src: string }[];
+  };
+  assert.equal(manifest.name, "Licht Launcher");
+  for (const icon of manifest.icons) {
+    await readFile(new URL(icon.src.slice(1), dist));
+  }
+});
 
 test("the favicon is published as a nonempty ICO file", async () => {
   const icon = await readFile(new URL("favicon.ico", dist));
@@ -63,7 +105,7 @@ test("the sitemap lists exactly the public page URLs", async () => {
   const sitemap = await readFile(new URL("sitemap.xml", dist), "utf8");
   const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(([, url]) => url);
   const docs = (await docsSources()).map((source) => `${website}${docsUrlPath(source)}`);
-  assert.deepEqual(urls.sort(), [website, `${website}privacy`, `${website}terms`, ...docs].sort());
+  assert.deepEqual(urls.sort(), [website, `${website}privacy-policy`, `${website}terms-of-use`, ...docs].sort());
 });
 
 test("robots.txt permits crawling and advertises the sitemap", async () => {

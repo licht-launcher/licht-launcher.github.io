@@ -1,6 +1,6 @@
 ---
 title: FAQ
-description: Short answers to common questions about Licht Launcher.
+description: "Answers to common questions about Licht Launcher: is it free and official, do you need Minecraft or Java, analytics, imports and supporting the project."
 ---
 
 # FAQ
@@ -29,17 +29,13 @@ Features and compatibility are still being refined, and you may find bugs. Repor
 
 No. Sign-in happens in your browser on Microsoft's own pages.
 
-## Can I play without a Microsoft account?
-
-Yes, with an offline profile. It does not authenticate you with online services.
-
 ## Do I need to install Java?
 
 No. The launcher downloads the Java runtime each game version needs. See [Create your first profile](/docs/getting-started/first-profile).
 
 ## Does it collect analytics or crash reports?
 
-No product analytics and no automatic crash-report uploads. The launcher still contacts services it needs, such as Mojang, Microsoft, mod providers and GitHub. See the [Privacy Policy](/privacy).
+No product analytics and no automatic crash-report uploads. The launcher still contacts services it needs, such as Mojang, Microsoft, mod providers and GitHub. See the [Privacy Policy](/privacy-policy).
 
 ## Can I import profiles from another launcher?
 

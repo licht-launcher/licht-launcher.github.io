@@ -1,6 +1,6 @@
 ---
 title: Install
-description: Download and install Licht Launcher on Windows or Linux.
+description: "Download and install Licht Launcher, a free Minecraft: Java Edition launcher, on Windows or Linux, and see what to do after installing."
 ---
 
 # Install

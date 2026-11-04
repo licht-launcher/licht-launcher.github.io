@@ -1,6 +1,6 @@
 ---
 title: Documentation
-description: Guides for installing, using and contributing to Licht Launcher.
+description: "Documentation for Licht Launcher, the free open-source Minecraft: Java Edition launcher: install guides, troubleshooting, references and contributing."
 ---
 
 # Documentation
@@ -17,11 +17,11 @@ New here? Start with these.
 
 ## Troubleshooting
 
-- [Common problems](/docs/troubleshooting/common-problems)
+- [Common issues](/docs/troubleshooting/common-issues)
 - [Open an issue](/docs/troubleshooting/open-an-issue)
 - [FAQ](/docs/troubleshooting/faq)
 
-## Reference
+## References
 
 - [Compatibility](/docs/reference/compatibility): supported systems and Minecraft versions.
 - [Game runtime](/docs/reference/game-runtime): modloaders, Java runtime, libraries and natives.
@@ -35,6 +35,6 @@ New here? Start with these.
 
 ## Legal
 
-- [Privacy Policy](/privacy) and [Terms of Use](/terms).
+- [Privacy Policy](/privacy-policy) and [Terms of Use](/terms-of-use).
 
 Licht Launcher does not include a Minecraft license. You need the appropriate game rights to play.

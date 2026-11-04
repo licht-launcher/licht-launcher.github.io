@@ -1,4 +1,4 @@
-import { defineConfig } from "vitepress";
+import { defineConfig, type HeadConfig } from "vitepress";
 
 const repository = "https://github.com/mateusneiva/licht-launcher";
 const website = "https://licht-launcher.github.io/";
@@ -7,13 +7,18 @@ const kofiButton = '<img class="kofi-button" src="/kofi-button.png" alt="Buy me 
 
 export default defineConfig({
   title: "Licht Launcher",
-  description: "A light, open-source launcher for Minecraft: Java Edition on Windows and Linux.",
+  description: "Licht Launcher is a free, open-source Minecraft: Java Edition launcher for Windows and Linux, with instances, mods and modpacks in a light interface.",
   lang: "en-US",
   base: "/",
   srcDir: "src",
   cleanUrls: true,
   head: [
     ["link", { rel: "icon", type: "image/vnd.microsoft.icon", href: "/favicon.ico" }],
+    ["link", { rel: "icon", type: "image/png", sizes: "192x192", href: "/icon-192.png" }],
+    ["link", { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" }],
+    ["link", { rel: "manifest", href: "/site.webmanifest" }],
+    ["meta", { name: "theme-color", content: "#ffffff", media: "(prefers-color-scheme: light)" }],
+    ["meta", { name: "theme-color", content: "#1b1b1f", media: "(prefers-color-scheme: dark)" }],
   ],
   sitemap: {
     hostname: website,
@@ -28,7 +33,41 @@ export default defineConfig({
     const url = new URL(path, website).href;
     const image = new URL("launcher-icon.png", website).href;
 
+    const structuredData =
+      page === "index.md"
+        ? [
+            [
+              "script",
+              { type: "application/ld+json" },
+              JSON.stringify([
+                {
+                  "@context": "https://schema.org",
+                  "@type": "WebSite",
+                  name: "Licht Launcher",
+                  url: website,
+                },
+                {
+                  "@context": "https://schema.org",
+                  "@type": "SoftwareApplication",
+                  name: "Licht Launcher",
+                  description,
+                  url: website,
+                  image,
+                  applicationCategory: "GameApplication",
+                  operatingSystem: "Windows, Linux",
+                  isAccessibleForFree: true,
+                  license: `${repository}/blob/main/LICENSE`,
+                  codeRepository: repository,
+                  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+                  author: { "@type": "Person", name: "Mateus Neiva" },
+                },
+              ]),
+            ] as HeadConfig,
+          ]
+        : [];
+
     return [
+      ...structuredData,
       ["link", { rel: "canonical", href: url }],
       ["meta", { property: "og:type", content: "website" }],
       ["meta", { property: "og:site_name", content: "Licht Launcher" }],
@@ -50,11 +89,11 @@ export default defineConfig({
   themeConfig: {
     logo: { src: "/launcher-icon.png", alt: "" },
     nav: [
-      { text: "Home", link: "/" },
       { text: "Docs", link: "/docs/", activeMatch: "/docs/" },
-      { text: "Privacy", link: "/privacy" },
-      { text: "Terms", link: "/terms" },
+      { text: "Privacy Policy", link: "/privacy-policy" },
+      { text: "Terms of Use", link: "/terms-of-use" },
       { text: "Download", link: `${repository}/releases/latest` },
+      { text: kofiButton, link: kofi },
     ],
     sidebar: {
       "/docs/": [
@@ -69,13 +108,13 @@ export default defineConfig({
         {
           text: "Troubleshooting",
           items: [
-            { text: "Common problems", link: "/docs/troubleshooting/common-problems" },
+            { text: "Common issues", link: "/docs/troubleshooting/common-issues" },
             { text: "Open an issue", link: "/docs/troubleshooting/open-an-issue" },
             { text: "FAQ", link: "/docs/troubleshooting/faq" },
           ],
         },
         {
-          text: "Reference",
+          text: "References",
           items: [
             { text: "Compatibility", link: "/docs/reference/compatibility" },
             { text: "Game runtime", link: "/docs/reference/game-runtime" },
@@ -95,13 +134,11 @@ export default defineConfig({
             { text: "Roadmap", link: "/docs/contributing/roadmap" },
           ],
         },
-        { text: kofiButton, link: kofi },
       ],
     },
-    socialLinks: [{ icon: "github", link: repository }],
     outline: [2, 3],
     footer: {
-      message: `Unofficial project, not affiliated with Mojang Studios or Microsoft.<br><a href="/privacy">Privacy Policy</a><br><a class="kofi-link" href="${kofi}" target="_blank" rel="noopener">${kofiButton}</a>`,
+      message: `Unofficial project, not affiliated with Mojang Studios or Microsoft.<br><a href="/privacy-policy">Privacy Policy</a> · <a href="/terms-of-use">Terms of Use</a>`,
       copyright: `Copyright © 2026 Mateus Neiva. Released under the <a href="${repository}/blob/main/LICENSE">MIT License</a>.`,
     },
   },
@@ -110,8 +147,8 @@ export default defineConfig({
       // Rewrite repository-relative policy links before VitePress resolves them.
       md.core.ruler.after("inline", "policy-links", (state) => {
         const destinations: Record<string, string> = {
-          "PRIVACY.md": "/privacy.md",
-          "TERMS.md": "/terms.md",
+          "PRIVACY.md": "/privacy-policy.md",
+          "TERMS.md": "/terms-of-use.md",
           "README.md": `${repository}/blob/main/README.md`,
           LICENSE: `${repository}/blob/main/LICENSE`,
         };

@@ -1,6 +1,6 @@
 ---
 title: Network requests
-description: Which services Licht Launcher contacts, and what each one receives.
+description: Every service Licht Launcher contacts while you play Minecraft, such as Microsoft, Mojang and mod providers, and what each one receives.
 ---
 
 # Network requests
@@ -39,4 +39,4 @@ Licht Launcher does not control how these providers store data or what analytics
 - [Eclipse Foundation Privacy Policy](https://www.eclipse.org/legal/privacy.php) for Adoptium and Temurin
 - Modloader services: [Fabric](https://fabricmc.net/), [Quilt](https://quiltmc.org/en/), [Forge](https://files.minecraftforge.net/static/privacy.html) and [NeoForge](https://neoforged.net/)
 
-The official statement is the [Privacy Policy](/privacy).
+The official statement is the [Privacy Policy](/privacy-policy).
