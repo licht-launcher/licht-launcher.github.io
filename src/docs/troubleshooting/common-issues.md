@@ -33,9 +33,16 @@ Run **Install/Repair** on the profile. The loader is only ready while the files 
 
 Those mods' authors disabled downloads outside CurseForge, so the launcher refuses to import the pack. The error names each blocked mod. There is no workaround inside the launcher.
 
-### A Modrinth pack is rejected
+### A Modrinth pack (.mrpack) fails to import
 
-Packs may only download files from `cdn.modrinth.com`. A pack that points to another host is not accepted.
+The launcher only accepts `.mrpack` files whose mods are hosted on Modrinth's own servers (`cdn.modrinth.com`). It refuses a pack that downloads files from anywhere else, such as GitHub, GitLab or the CurseForge CDN, as a safety measure. It also refuses files that have no checksum or that fail it, which can happen when a download is corrupted or the file was altered.
+
+What you can try:
+
+1. Download the pack again from its Modrinth page, and from the latest version, in case the file is damaged or outdated.
+2. Make sure you picked the `.mrpack` file and not a different pack format. CurseForge packs use `.zip`.
+3. If the pack still fails, ask its author to publish a version where every mod comes from Modrinth. There is no setting in the launcher to allow other hosts.
+4. If you believe the pack is valid, [open an issue](/docs/troubleshooting/open-an-issue) with the pack name and version.
 
 ## Known limitations
 
