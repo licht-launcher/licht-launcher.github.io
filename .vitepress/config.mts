@@ -63,7 +63,6 @@ export default defineConfig({
           items: [
             { text: "Overview", link: "/docs/getting-started/" },
             { text: "Install", link: "/docs/getting-started/install" },
-            { text: "Sign in", link: "/docs/getting-started/sign-in" },
             { text: "Create your first profile", link: "/docs/getting-started/first-profile" },
           ],
         },

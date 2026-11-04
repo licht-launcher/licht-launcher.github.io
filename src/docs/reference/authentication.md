@@ -5,7 +5,7 @@ description: How Microsoft sign-in works in Licht Launcher and where your sessio
 
 # Authentication
 
-Licht Launcher signs players in with personal Microsoft accounts, then through Xbox Live and Minecraft Services. Offline launch stays available when no Microsoft account is active. For the steps you follow, see [Sign in](/docs/getting-started/sign-in).
+Licht Launcher signs players in with personal Microsoft accounts, then through Xbox Live and Minecraft Services. Offline launch stays available when no Microsoft account is active.
 
 ## Design choices
 
