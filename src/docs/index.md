@@ -30,9 +30,20 @@ New here? Start with these.
 - [Local data and removal](/docs/troubleshooting/local-data)
 - [FAQ](/docs/troubleshooting/faq)
 
-## Project
+## Reference
 
-- [Contributing](/docs/contributing/): development setup and the contribution workflow.
+- [Compatibility](/docs/reference/compatibility): supported systems and Minecraft versions.
+- [Java runtime](/docs/reference/java-runtime): which Java each version needs.
+- [Data and storage](/docs/reference/data-and-storage): what is stored and where.
+- [Network requests](/docs/reference/network-requests): which services are contacted.
+- [Authentication](/docs/reference/authentication): how Microsoft sign-in works.
+
+## Contributing
+
+- [How to contribute](/docs/contributing/): development setup, architecture, releasing and the roadmap.
+
+## Legal
+
 - [Privacy Policy](/privacy) and [Terms of Use](/terms).
 
 Licht Launcher does not include a Minecraft license. You need the appropriate game rights to play.

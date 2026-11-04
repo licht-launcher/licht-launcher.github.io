@@ -24,7 +24,7 @@ The launcher profile folder normally lives in your system's data directory under
 1. Remove saved accounts in **Settings**.
 2. Back up worlds and any files you want to keep.
 3. Close the launcher.
-4. Use the application-directory location shown in Settings to find the launcher data, and check any separate profile folders or custom locations you chose.
+4. Use the application-directory location shown in **Settings > Downloads** to find the launcher data, and check any separate profile folders or custom locations you chose. See [Data and storage](/docs/reference/data-and-storage).
 5. Delete only the data you intend to remove.
 
 Uninstalling the launcher on its own can leave these files, WebView storage and credential store entries behind. Remaining credentials can be removed through the operating system's credential manager, under the service name `app.licht.launcher`.
