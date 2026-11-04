@@ -61,7 +61,11 @@ test("the favicon is published as a nonempty ICO file", async () => {
 test("the sitemap lists exactly the public page URLs", async () => {
   const sitemap = await readFile(new URL("sitemap.xml", dist), "utf8");
   const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(([, url]) => url);
-  assert.deepEqual(urls.sort(), [website, `${website}privacy.html`, `${website}terms.html`].sort());
+  const docs = ["", "getting-started.html", "profiles-and-mods.html", "troubleshooting.html", "contributing.html"];
+  assert.deepEqual(
+    urls.sort(),
+    [website, `${website}privacy.html`, `${website}terms.html`, ...docs.map((page) => `${website}docs/${page}`)].sort(),
+  );
 });
 
 test("robots.txt permits crawling and advertises the sitemap", async () => {

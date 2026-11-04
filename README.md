@@ -74,6 +74,7 @@ pnpm preview
 ├── scripts/sync-policies.mts    # Canonical policy importer
 ├── src/
 │   ├── index.md                 # Homepage
+│   ├── docs/                    # Documentation pages
 │   ├── privacy.md               # Privacy Policy inclusion
 │   └── terms.md                 # Terms of Use inclusion
 ├── tests/                      # Import and generated-site checks
