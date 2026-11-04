@@ -11,8 +11,7 @@ The launcher is open source under the [MIT License](https://github.com/mateusnei
 
 ## In this section
 
-- [Development setup](/docs/contributing/development): tools, commands and the `licht` CLI.
-- [Code and testing guidelines](/docs/contributing/guidelines): conventions and the checks to run.
+- [Development setup](/docs/contributing/development): tools, commands, the `licht` CLI, conventions, tests and the checks to run.
 - [Architecture](/docs/contributing/architecture): layers, communication and where things live.
 - [Releasing](/docs/contributing/releasing): codenames, updates and the signing key.
 - [Code signing policy](/docs/contributing/code-signing): current status and responsibilities.

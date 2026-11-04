@@ -46,7 +46,7 @@ The generated `src/routeTree.gen.ts` is committed, so type checking does not dep
 
 ## Testing
 
-The core is testable on its own with `cargo test -p licht-core`. Integration tests under `crates/licht-core/tests/` mirror the source domains, and fixtures live under `tests/fixtures/`. Tests use saved JSON and temporary databases without network access. Frontend tests use Vitest, Testing Library and jsdom. See the [guidelines](/docs/contributing/guidelines).
+The core is testable on its own with `cargo test -p licht-core`. Integration tests under `crates/licht-core/tests/` mirror the source domains, and fixtures live under `tests/fixtures/`. Tests use saved JSON and temporary databases without network access. Frontend tests use Vitest, Testing Library and jsdom. See [Tests](/docs/contributing/development#tests).
 
 ## Related internals
 

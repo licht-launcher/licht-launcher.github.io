@@ -94,7 +94,6 @@ export default defineConfig({
           items: [
             { text: "How to contribute", link: "/docs/contributing/" },
             { text: "Development setup", link: "/docs/contributing/development" },
-            { text: "Code and testing guidelines", link: "/docs/contributing/guidelines" },
             { text: "Architecture", link: "/docs/contributing/architecture" },
             { text: "Releasing", link: "/docs/contributing/releasing" },
             { text: "Code signing policy", link: "/docs/contributing/code-signing" },
