@@ -114,7 +114,7 @@ export default defineConfig({
           ],
         },
         {
-          text: "Reference",
+          text: "References",
           items: [
             { text: "Compatibility", link: "/docs/reference/compatibility" },
             { text: "Game runtime", link: "/docs/reference/game-runtime" },
