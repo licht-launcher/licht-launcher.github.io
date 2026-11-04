@@ -65,6 +65,13 @@ export default defineConfig({
             { text: "Contributing", link: "/docs/contributing" },
           ],
         },
+        {
+          text: "Legal",
+          items: [
+            { text: "Privacy Policy", link: "/privacy" },
+            { text: "Terms of Use", link: "/terms" },
+          ],
+        },
       ],
     },
     socialLinks: [{ icon: "github", link: repository }],
