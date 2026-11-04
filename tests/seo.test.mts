@@ -5,7 +5,7 @@ import { docsSources, docsUrlPath } from "./docs-pages.mts";
 
 const dist = new URL("../.vitepress/dist/", import.meta.url);
 const website = "https://licht-launcher.github.io/";
-const pages = ["index.html", "privacy.html", "terms.html"];
+const pages = ["index.html", "privacy-policy.html", "terms-of-use.html"];
 
 function attribute(tag: string, name: string): string {
   const value = tag.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1];
@@ -75,7 +75,7 @@ test("the home page publishes WebSite and SoftwareApplication JSON-LD, other pag
   assert.deepEqual(home[0].map((item) => item["@type"]), ["WebSite", "SoftwareApplication"]);
   assert.ok(home[0].every((item) => item.url === website));
   assert.equal(home[0][1].operatingSystem, "Windows, Linux");
-  assert.deepEqual(await extract("privacy.html"), []);
+  assert.deepEqual(await extract("privacy-policy.html"), []);
 });
 
 test("the icon set and web manifest are published with matching sizes", async () => {
@@ -105,7 +105,7 @@ test("the sitemap lists exactly the public page URLs", async () => {
   const sitemap = await readFile(new URL("sitemap.xml", dist), "utf8");
   const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(([, url]) => url);
   const docs = (await docsSources()).map((source) => `${website}${docsUrlPath(source)}`);
-  assert.deepEqual(urls.sort(), [website, `${website}privacy`, `${website}terms`, ...docs].sort());
+  assert.deepEqual(urls.sort(), [website, `${website}privacy-policy`, `${website}terms-of-use`, ...docs].sort());
 });
 
 test("robots.txt permits crawling and advertises the sitemap", async () => {
