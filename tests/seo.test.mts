@@ -49,8 +49,27 @@ for (const page of pages) {
     assert.equal(image.readUInt32BE(16).toString(), metas.get("og:image:width"));
     assert.equal(image.readUInt32BE(20).toString(), metas.get("og:image:height"));
     assert.match(head, /<link[^>]*rel="icon"[^>]*href="\/favicon.ico"/);
+    assert.match(head, /<link[^>]*rel="icon"[^>]*href="\/icon-192.png"/);
+    assert.match(head, /<link[^>]*rel="apple-touch-icon"[^>]*href="\/apple-touch-icon.png"/);
+    assert.match(head, /<link[^>]*rel="manifest"[^>]*href="\/site.webmanifest"/);
   });
 }
+
+test("the icon set and web manifest are published with matching sizes", async () => {
+  for (const [file, size] of [["apple-touch-icon.png", 180], ["icon-192.png", 192]] as const) {
+    const image = await readFile(new URL(file, dist));
+    assert.equal(image.readUInt32BE(16), size);
+    assert.equal(image.readUInt32BE(20), size);
+  }
+  const manifest = JSON.parse(await readFile(new URL("site.webmanifest", dist), "utf8")) as {
+    name: string;
+    icons: { src: string }[];
+  };
+  assert.equal(manifest.name, "Licht Launcher");
+  for (const icon of manifest.icons) {
+    await readFile(new URL(icon.src.slice(1), dist));
+  }
+});
 
 test("the favicon is published as a nonempty ICO file", async () => {
   const icon = await readFile(new URL("favicon.ico", dist));

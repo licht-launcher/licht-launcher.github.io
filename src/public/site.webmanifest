@@ -1,0 +1,11 @@
+{
+  "name": "Licht Launcher",
+  "short_name": "Licht",
+  "description": "A light, open-source launcher for Minecraft: Java Edition on Windows and Linux.",
+  "start_url": "/",
+  "display": "browser",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/launcher-icon.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
