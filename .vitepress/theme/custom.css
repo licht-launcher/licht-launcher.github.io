@@ -138,3 +138,22 @@
 .VPHomeHero .VPButton.alt[href="/docs/"] {
   --home-icon: url("/icons/docs.svg");
 }
+
+.roadmap-table table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.roadmap-table th:nth-child(1) {
+  width: 11rem;
+}
+
+.roadmap-table th:nth-child(2) {
+  width: 8rem;
+}
+
+.wide-table table {
+  display: table;
+  width: 100%;
+}

@@ -1,19 +1,11 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
+import { docsHtmlFile, docsSources } from "./docs-pages.mts";
 
 const dist = new URL("../.vitepress/dist/", import.meta.url);
 const base = "/";
-const pages = [
-  "index.html",
-  "privacy.html",
-  "terms.html",
-  "docs/index.html",
-  "docs/getting-started.html",
-  "docs/profiles-and-mods.html",
-  "docs/troubleshooting.html",
-  "docs/contributing.html",
-];
+const pages = ["index.html", "privacy.html", "terms.html", ...(await docsSources()).map(docsHtmlFile)];
 
 for (const page of pages) {
   test(`${page} publishes working project-relative links and assets`, async () => {

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
+import { docsSources, docsUrlPath } from "./docs-pages.mts";
 
 const dist = new URL("../.vitepress/dist/", import.meta.url);
 const website = "https://licht-launcher.github.io/";
@@ -61,11 +62,8 @@ test("the favicon is published as a nonempty ICO file", async () => {
 test("the sitemap lists exactly the public page URLs", async () => {
   const sitemap = await readFile(new URL("sitemap.xml", dist), "utf8");
   const urls = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(([, url]) => url);
-  const docs = ["", "getting-started", "profiles-and-mods", "troubleshooting", "contributing"];
-  assert.deepEqual(
-    urls.sort(),
-    [website, `${website}privacy`, `${website}terms`, ...docs.map((page) => `${website}docs/${page}`)].sort(),
-  );
+  const docs = (await docsSources()).map((source) => `${website}${docsUrlPath(source)}`);
+  assert.deepEqual(urls.sort(), [website, `${website}privacy`, `${website}terms`, ...docs].sort());
 });
 
 test("robots.txt permits crawling and advertises the sitemap", async () => {

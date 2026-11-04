@@ -57,13 +57,42 @@ export default defineConfig({
     sidebar: {
       "/docs/": [
         {
-          text: "Documentation",
+          text: "Getting Started",
           items: [
-            { text: "Overview", link: "/docs/" },
-            { text: "Getting started", link: "/docs/getting-started" },
-            { text: "Profiles and mods", link: "/docs/profiles-and-mods" },
-            { text: "Troubleshooting", link: "/docs/troubleshooting" },
-            { text: "Contributing", link: "/docs/contributing" },
+            { text: "Overview", link: "/docs/getting-started/" },
+            { text: "Install", link: "/docs/getting-started/install" },
+            { text: "Sign in", link: "/docs/getting-started/sign-in" },
+            { text: "Create your first profile", link: "/docs/getting-started/first-profile" },
+            { text: "Updates and uninstall", link: "/docs/getting-started/updates-and-uninstall" },
+          ],
+        },
+        {
+          text: "Modding",
+          items: [
+            { text: "Modloaders", link: "/docs/modding/modloaders" },
+            { text: "Modpacks", link: "/docs/modding/modpacks" },
+            { text: "Managing installed content", link: "/docs/modding/managing-content" },
+          ],
+        },
+        {
+          text: "Troubleshooting",
+          items: [
+            { text: "Common problems", link: "/docs/troubleshooting/common-problems" },
+            { text: "Logs and reporting a problem", link: "/docs/troubleshooting/logs-and-reporting" },
+            { text: "Local data and removal", link: "/docs/troubleshooting/local-data" },
+            { text: "FAQ", link: "/docs/troubleshooting/faq" },
+          ],
+        },
+        {
+          text: "Contributing",
+          items: [
+            { text: "How to contribute", link: "/docs/contributing/" },
+            { text: "Development setup", link: "/docs/contributing/development" },
+            { text: "Code and testing guidelines", link: "/docs/contributing/guidelines" },
+            { text: "Architecture", link: "/docs/contributing/architecture" },
+            { text: "Releasing", link: "/docs/contributing/releasing" },
+            { text: "Code signing policy", link: "/docs/contributing/code-signing" },
+            { text: "Roadmap", link: "/docs/contributing/roadmap" },
           ],
         },
         {
