@@ -84,6 +84,16 @@ export default defineConfig({
           ],
         },
         {
+          text: "Reference",
+          items: [
+            { text: "Compatibility", link: "/docs/reference/compatibility" },
+            { text: "Java runtime", link: "/docs/reference/java-runtime" },
+            { text: "Data and storage", link: "/docs/reference/data-and-storage" },
+            { text: "Network requests", link: "/docs/reference/network-requests" },
+            { text: "Authentication", link: "/docs/reference/authentication" },
+          ],
+        },
+        {
           text: "Contributing",
           items: [
             { text: "How to contribute", link: "/docs/contributing/" },
