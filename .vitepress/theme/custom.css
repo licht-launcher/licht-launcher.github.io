@@ -164,10 +164,6 @@
   width: auto;
 }
 
-.VPSidebarItem.level-0 > .item > .link[href="https://ko-fi.com/mateusneiva"] {
-  padding-top: 16px;
-}
-
 .VPFooter .container {
   display: flex;
   flex-direction: column;

@@ -69,11 +69,11 @@ for (const page of ["index.html", "privacy-policy.html", "terms-of-use.html"]) {
   });
 }
 
-test("the docs sidebar ends with the Ko-fi button", async () => {
+test("the docs sidebar does not include the Ko-fi button", async () => {
   const html = await readFile(new URL("docs/getting-started/install.html", dist), "utf8");
   const sidebar = html.match(/<aside class="VPSidebar"[\s\S]*?<\/aside>/)?.[0];
   assert.ok(sidebar);
-  assert.match(sidebar, kofiLink);
+  assert.doesNotMatch(sidebar, /ko-fi/i);
 });
 
 test("the Ko-fi button is published as a PNG image", async () => {

@@ -134,7 +134,6 @@ export default defineConfig({
             { text: "Roadmap", link: "/docs/contributing/roadmap" },
           ],
         },
-        { text: kofiButton, link: kofi },
       ],
     },
     outline: [2, 3],
