@@ -54,3 +54,14 @@ test("policy headings are included from the downloaded canonical documents", asy
     }
   }
 });
+
+test("the install page publishes the latest release downloads and its version without JavaScript", async () => {
+  const html = await readFile(new URL("docs/getting-started/install.html", dist), "utf8");
+  const version = html.match(/Latest version: <strong[^>]*>(\d+\.\d+\.\d+[^<]*)<\/strong>/)?.[1];
+  assert.ok(version, "missing release version");
+  const downloads = [...html.matchAll(/<a [^>]*?href="(https:\/\/github.com\/[^"]+\/releases\/download\/[^"]+)"[^>]*>Download<\/a>/g)];
+  assert.ok(downloads.length >= 1, "missing download links");
+  for (const [, url] of downloads) {
+    assert.ok(url.includes(`/v${version}/`) && url.includes(`-${version}-`), `download is not for ${version}: ${url}`);
+  }
+});
