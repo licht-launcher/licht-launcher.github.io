@@ -1,6 +1,6 @@
 ---
 title: Authentication
-description: How Microsoft sign-in works in Licht Launcher and where your session is kept.
+description: "How Microsoft sign-in works in Licht Launcher for Minecraft: the login flow, why it never sees your password, and where your session is stored."
 ---
 
 # Authentication

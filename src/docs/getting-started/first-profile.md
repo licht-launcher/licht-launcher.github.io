@@ -1,6 +1,6 @@
 ---
 title: Create your first profile
-description: Create a profile, let the launcher prepare the game and press Play.
+description: Create your first Minecraft profile in Licht Launcher from scratch or from a modpack file, let it prepare Java and the game, then press Play.
 ---
 
 # Create your first profile

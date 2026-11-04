@@ -1,6 +1,6 @@
 ---
 title: Documentation
-description: Guides for installing, using and contributing to Licht Launcher.
+description: "Documentation for Licht Launcher, the free open-source Minecraft: Java Edition launcher: install guides, troubleshooting, references and contributing."
 ---
 
 # Documentation

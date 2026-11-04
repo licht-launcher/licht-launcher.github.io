@@ -1,6 +1,6 @@
 ---
 title: Network requests
-description: Which services Licht Launcher contacts, and what each one receives.
+description: Every service Licht Launcher contacts while you play Minecraft, such as Microsoft, Mojang and mod providers, and what each one receives.
 ---
 
 # Network requests

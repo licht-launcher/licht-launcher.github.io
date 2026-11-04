@@ -1,6 +1,6 @@
 ---
 title: Architecture
-description: The layers of Licht Launcher, how they communicate and where code belongs.
+description: "How the Licht Launcher Minecraft launcher is built: its layers, how they communicate, the frontend layout, error handling and testing."
 ---
 
 # Architecture

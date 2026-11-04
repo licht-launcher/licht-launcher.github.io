@@ -1,6 +1,6 @@
 ---
 title: Development setup
-description: Install the tools, run the launcher in development, follow the conventions and run the checks before a pull request.
+description: "Set up Licht Launcher for development: requirements, running the app, an isolated profile, the CLI, conventions and checks before a pull request."
 ---
 
 # Development setup
