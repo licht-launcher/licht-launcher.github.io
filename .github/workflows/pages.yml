@@ -39,6 +39,8 @@ jobs:
 
       - name: Build website
         run: pnpm build
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Check published pages and links
         run: pnpm test
