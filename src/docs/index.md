@@ -21,7 +21,7 @@ New here? Start with these.
 ## Troubleshooting
 
 - [Common problems](/docs/troubleshooting/common-problems)
-- [Logs and reporting a problem](/docs/troubleshooting/logs-and-reporting)
+- [Open an issue](/docs/troubleshooting/open-an-issue)
 - [Local data and removal](/docs/troubleshooting/local-data)
 - [FAQ](/docs/troubleshooting/faq)
 

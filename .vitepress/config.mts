@@ -73,7 +73,7 @@ export default defineConfig({
           text: "Troubleshooting",
           items: [
             { text: "Common problems", link: "/docs/troubleshooting/common-problems" },
-            { text: "Logs and reporting a problem", link: "/docs/troubleshooting/logs-and-reporting" },
+            { text: "Open an issue", link: "/docs/troubleshooting/open-an-issue" },
             { text: "Local data and removal", link: "/docs/troubleshooting/local-data" },
             { text: "FAQ", link: "/docs/troubleshooting/faq" },
           ],

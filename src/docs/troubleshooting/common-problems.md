@@ -5,7 +5,7 @@ description: Fixes and explanations for the problems most likely to come up.
 
 # Common problems
 
-If your problem is not here, see [Logs and reporting a problem](/docs/troubleshooting/logs-and-reporting).
+If your problem is not here, see [Open an issue](/docs/troubleshooting/open-an-issue).
 
 ## Installing
 
@@ -27,7 +27,7 @@ Remove it in **Settings**. This deletes the stored credentials from the credenti
 
 ### A Forge or NeoForge profile will not launch
 
-Run **Install/Repair** on the profile. The loader is only ready while the files recorded during installation still match what is on disk, so a missing or modified file is repaired by running it again. If it keeps failing, [report it](/docs/troubleshooting/logs-and-reporting) with the game and loader versions.
+Run **Install/Repair** on the profile. The loader is only ready while the files recorded during installation still match what is on disk, so a missing or modified file is repaired by running it again. If it keeps failing, [report it](/docs/troubleshooting/open-an-issue) with the game and loader versions.
 
 ### CurseForge results do not appear
 

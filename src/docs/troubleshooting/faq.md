@@ -23,7 +23,7 @@ No. It is an unofficial project, not affiliated with Mojang Studios or Microsoft
 
 ## Why is it called an Early Release?
 
-Features and compatibility are still being refined, and you may find bugs. Reports help shape it. See [Logs and reporting a problem](/docs/troubleshooting/logs-and-reporting).
+Features and compatibility are still being refined, and you may find bugs. Reports help shape it. See [Open an issue](/docs/troubleshooting/open-an-issue).
 
 ## Does Licht Launcher see my Microsoft password?
 
