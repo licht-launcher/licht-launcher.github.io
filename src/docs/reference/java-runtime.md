@@ -39,7 +39,7 @@ Runtime folders are named like `temurin17-jre17.0.20-win_x64`.
 
 You can point the launcher at a different Java in its settings. The command-line tool has a `--java` option for the same purpose. The launcher can also detect Java installations in the usual places, such as `C:\Program Files\Eclipse Adoptium` on Windows, for the settings screen.
 
-Modloader installation uses a configured Java of the required major version when there is one. Otherwise it uses the downloaded Temurin runtime. See [Modloaders](/docs/modding/modloaders).
+Modloader installation uses a configured Java of the required major version when there is one. Otherwise it uses the downloaded Temurin runtime. See [Modloaders](/docs/reference/modloaders).
 
 ## Technical details
 

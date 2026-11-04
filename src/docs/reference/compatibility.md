@@ -48,7 +48,7 @@ An offline profile gets a stable player identity from its username, so the same 
 - On Linux, graphical launch has not been re-checked.
 - In some very old versions, such as 1.5.2, one session argument is still passed unfilled.
 - Java 17 and older write the whole game log in one encoding. Mixed output can show garbled characters, for example accents, and unsupported Windows code pages are decoded leniently.
-- The version checks above were made on Windows and do not cover every Minecraft and loader combination. See [Modloaders](/docs/modding/modloaders).
+- The version checks above were made on Windows and do not cover every Minecraft and loader combination. See [Modloaders](/docs/reference/modloaders).
 
 ## Technical details
 

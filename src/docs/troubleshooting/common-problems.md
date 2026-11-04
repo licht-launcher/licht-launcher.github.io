@@ -31,7 +31,7 @@ Run **Install/Repair** on the profile. The loader is only ready while the files 
 
 ### CurseForge results do not appear
 
-CurseForge needs an API key. Set `LICHT_CURSEFORGE_API_KEY` before starting the launcher. See [Modpacks](/docs/modding/modpacks#curseforge). Without a key, only Modrinth is searched.
+CurseForge needs an API key. Set `LICHT_CURSEFORGE_API_KEY` before starting the launcher. See [Modpacks](/docs/getting-started/modpacks#curseforge). Without a key, only Modrinth is searched.
 
 ### A CurseForge modpack import stops with a list of mods
 
@@ -46,4 +46,4 @@ Packs may only download files from `cdn.modrinth.com`. A pack that points to ano
 - **Linux graphical launch** has not been re-checked in the latest compatibility pass. Compilation and tests run on Windows and Ubuntu.
 - **Older versions** (for example 1.5.2) start through a legacy launch path. One legacy session argument is still passed unfilled, which is a known gap.
 - **Garbled accents in game logs** can happen on older Java versions, because Java 17 and older write the whole log in one encoding. Newer Java uses UTF-8.
-- **Installing individual mods** from inside the launcher is not available yet. See [Managing installed content](/docs/modding/managing-content).
+- **Installing individual mods** from inside the launcher is not available yet. See [Installed content](/docs/getting-started/first-profile#installed-content).
