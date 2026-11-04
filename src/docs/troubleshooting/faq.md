@@ -1,6 +1,6 @@
 ---
 title: FAQ
-description: Short answers to common questions about Licht Launcher.
+description: "Answers to common questions about Licht Launcher: is it free and official, do you need Minecraft or Java, analytics, imports and supporting the project."
 ---
 
 # FAQ

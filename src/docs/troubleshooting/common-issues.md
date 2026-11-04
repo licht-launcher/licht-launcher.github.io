@@ -1,6 +1,6 @@
 ---
 title: Common issues
-description: Fixes and explanations for the problems most likely to come up.
+description: "Fix common Licht Launcher problems: Microsoft sign-in on Linux, Forge and NeoForge launch errors, modpack import failures and game start issues."
 ---
 
 # Common issues

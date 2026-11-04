@@ -62,7 +62,7 @@ test("every public page has its own meta description", async () => {
     const html = await readFile(new URL(file, dist), "utf8");
     const description = html.match(/<meta name="description" content="([^"]+)"/)?.[1];
     assert.ok(description, `${file} has no meta description`);
-    assert.ok(description.length >= 50 && description.length <= 160, `${file} description length is ${description.length}`);
+    assert.ok(description.length >= 110 && description.length <= 155, `${file} description length is ${description.length}`);
     assert.equal(seen.get(description), undefined, `${file} repeats the description of ${seen.get(description)}`);
     seen.set(description, file);
   }

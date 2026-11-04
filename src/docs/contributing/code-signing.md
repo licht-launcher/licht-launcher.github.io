@@ -1,6 +1,6 @@
 ---
 title: Code signing policy
-description: The current signing status of Licht Launcher releases and who is responsible for them.
+description: The current code signing status of Licht Launcher releases for Windows and Linux, who is responsible, and the policy for a future SignPath setup.
 ---
 
 # Code signing policy

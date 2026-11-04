@@ -1,6 +1,6 @@
 ---
 title: Roadmap
-description: What Licht Launcher has done, what is still open and what may come later.
+description: "The Licht Launcher roadmap: what the Minecraft launcher already does, which items are still open, and ideas planned for later."
 ---
 
 # Roadmap

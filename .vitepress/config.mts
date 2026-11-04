@@ -7,7 +7,7 @@ const kofiButton = '<img class="kofi-button" src="/kofi-button.png" alt="Buy me 
 
 export default defineConfig({
   title: "Licht Launcher",
-  description: "A light, open-source launcher for Minecraft: Java Edition on Windows and Linux.",
+  description: "Licht Launcher is a free, open-source Minecraft: Java Edition launcher for Windows and Linux, with instances, mods and modpacks in a light interface.",
   lang: "en-US",
   base: "/",
   srcDir: "src",

@@ -1,6 +1,6 @@
 ---
 title: Open an issue
-description: Where to find logs, how to share them safely and how to report an issue.
+description: "How to report a Licht Launcher bug: where to find the logs, how to share them without leaking personal data, and how to send a private report."
 ---
 
 # Open an issue

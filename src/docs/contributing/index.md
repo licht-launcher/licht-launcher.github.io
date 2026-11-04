@@ -1,6 +1,6 @@
 ---
 title: How to contribute
-description: How to propose a change, open a pull request and get it reviewed.
+description: "Contribute to Licht Launcher, an open-source Minecraft launcher: how to propose a change, open a pull request, licensing and where to ask questions."
 ---
 
 # How to contribute

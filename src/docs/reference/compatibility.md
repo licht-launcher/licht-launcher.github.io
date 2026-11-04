@@ -1,6 +1,6 @@
 ---
 title: Compatibility
-description: Supported systems and Minecraft versions, and how older and newer versions differ.
+description: "Which Minecraft: Java Edition versions, accounts and systems Licht Launcher supports, how older versions differ, and the known gaps."
 ---
 
 # Compatibility

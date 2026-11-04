@@ -1,6 +1,6 @@
 ---
 title: Data and storage
-description: What Licht Launcher keeps on your computer, where it lives and how to move it.
+description: What Licht Launcher stores on your computer, where the profile folder and application directory live, and how to move your Minecraft content.
 ---
 
 # Data and storage

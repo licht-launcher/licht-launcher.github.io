@@ -1,6 +1,6 @@
 ---
 title: Overview
-description: What Licht Launcher is, what it runs on and where to start.
+description: "Learn what Licht Launcher does, what it needs to run Minecraft: Java Edition on Windows or Linux, and where to go next."
 ---
 
 # Overview

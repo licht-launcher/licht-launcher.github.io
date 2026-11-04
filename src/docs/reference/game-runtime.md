@@ -1,6 +1,6 @@
 ---
 title: Game runtime
-description: Modloaders, the Java runtime, natives and libraries the launcher prepares for each profile.
+description: "How Licht Launcher prepares Minecraft: supported modloaders, the Java runtime it picks or downloads, libraries and natives for each profile."
 ---
 
 # Game runtime

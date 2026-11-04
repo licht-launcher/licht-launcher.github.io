@@ -1,6 +1,6 @@
 ---
 title: Releasing
-description: Release codenames, how updates are published and the updater signing key.
+description: "How Licht Launcher releases work: version codenames, release rules, the auto-update flow for users and the updater signing key."
 ---
 
 # Releasing
