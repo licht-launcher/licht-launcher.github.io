@@ -11,15 +11,21 @@ Releases are produced by CI from a tag and published on [GitHub Releases](https:
 
 Each `0.x` release is named after a flower, in German, in this order:
 
-| Version | Codename | Meaning |
-| --- | --- | --- |
-| 0.1 | Lilie | lily |
-| 0.2 | Iris | iris |
-| 0.3 | Rose | rose |
-| 0.4 | Immergrün | periwinkle |
-| 0.5 | Anemone | anemone |
-| 0.6 | Narzisse | daffodil |
-| 0.7 | Edelweiß | edelweiss |
+<div class="wide-table">
+
+| Version | Codename | Meaning | Used |
+| --- | --- | --- | --- |
+| 0.1 | Lilie | lily | ✓ |
+| 0.2 | Iris | iris | ✓ |
+| 0.3 | Rose | rose | |
+| 0.4 | Immergrün | periwinkle | |
+| 0.5 | Anemone | anemone | |
+| 0.6 | Narzisse | daffodil | |
+| 0.7 | Edelweiß | edelweiss | |
+
+</div>
+
+A check (✓) marks a codename already used by a published release. The [GitHub Releases](https://github.com/mateusneiva/licht-launcher/releases) page lists every version.
 
 From 0.8 on, the list continues and is decided with the project owner.
 
