@@ -2,6 +2,8 @@ import { defineConfig } from "vitepress";
 
 const repository = "https://github.com/mateusneiva/licht-launcher";
 const website = "https://licht-launcher.github.io/";
+const kofi = "https://ko-fi.com/mateusneiva";
+const kofiButton = '<img class="kofi-button" src="/kofi-button.png" alt="Buy me a coffee on Ko-fi" width="143" height="36">';
 
 export default defineConfig({
   title: "Licht Launcher",
@@ -112,12 +114,13 @@ export default defineConfig({
             { text: "Terms of Use", link: "/terms" },
           ],
         },
+        { text: kofiButton, link: kofi },
       ],
     },
     socialLinks: [{ icon: "github", link: repository }],
     outline: [2, 3],
     footer: {
-      message: 'Unofficial project, not affiliated with Mojang Studios or Microsoft.<br><a href="/privacy">Privacy Policy</a>',
+      message: `Unofficial project, not affiliated with Mojang Studios or Microsoft.<br><a href="/privacy">Privacy Policy</a><br><a class="kofi-link" href="${kofi}" target="_blank" rel="noopener">${kofiButton}</a>`,
       copyright: `Copyright © 2026 Mateus Neiva. Released under the <a href="${repository}/blob/main/LICENSE">MIT License</a>.`,
     },
   },
