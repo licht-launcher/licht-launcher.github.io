@@ -82,8 +82,7 @@ export default defineConfig({
           text: "Reference",
           items: [
             { text: "Compatibility", link: "/docs/reference/compatibility" },
-            { text: "Modloaders", link: "/docs/reference/modloaders" },
-            { text: "Java runtime", link: "/docs/reference/java-runtime" },
+            { text: "Game runtime", link: "/docs/reference/game-runtime" },
             { text: "Data and storage", link: "/docs/reference/data-and-storage" },
             { text: "Network requests", link: "/docs/reference/network-requests" },
             { text: "Authentication", link: "/docs/reference/authentication" },

@@ -56,5 +56,5 @@ Profiles hold your worlds and other user files. Back up anything you care about 
 ## Next
 
 - [Modpacks](/docs/getting-started/modpacks)
-- [Modloaders](/docs/reference/modloaders)
+- [Modloaders](/docs/reference/game-runtime#modloaders)
 - [Updates and uninstall](/docs/getting-started/updates-and-uninstall)

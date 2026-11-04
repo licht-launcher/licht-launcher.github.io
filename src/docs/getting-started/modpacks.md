@@ -13,7 +13,7 @@ Modrinth works without an account or API key.
 
 - Search shows modpacks sorted by downloads and lists each pack's game and loader versions.
 - Import reads the pack's `.mrpack` file, so you can also import an `.mrpack` you downloaded yourself.
-- The pack decides the Minecraft version and the loader (Fabric, Quilt, Forge or NeoForge). The launcher prepares it as described in [Modloaders](/docs/reference/modloaders).
+- The pack decides the Minecraft version and the loader (Fabric, Quilt, Forge or NeoForge). The launcher prepares it as described in [Modloaders](/docs/reference/game-runtime#modloaders).
 - The pack's bundled files (`overrides/`, then `client-overrides/`) are copied into the profile.
 
 ### Safety checks
