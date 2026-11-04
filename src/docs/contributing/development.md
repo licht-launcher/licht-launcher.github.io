@@ -5,7 +5,7 @@ description: Install the tools, run the launcher in development and use the lich
 
 # Development setup
 
-The desktop app uses **Tauri v2**, **React**, **TypeScript** and **Rust**. Start with the [contributing overview](/docs/contributing/) for how to propose changes.
+The desktop app uses **Tauri v2**, **React**, **TypeScript** and **Rust**. Start with [How to contribute](/docs/contributing/) to see how to propose changes.
 
 ## Requirements
 

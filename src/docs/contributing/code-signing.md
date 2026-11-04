@@ -40,6 +40,6 @@ If SignPath accepts the project and signing is integrated, artifacts signed thro
 ## Related
 
 - [Releasing](/docs/contributing/releasing#updates): the current updater-signature workflow.
-- [Contributing overview](/docs/contributing/): how contributions are reviewed.
+- [How to contribute](/docs/contributing/): how contributions are reviewed.
 - [Privacy Policy](/privacy): data handling and automatic network requests.
 - The canonical document: [CODE_SIGNING.md](https://github.com/mateusneiva/licht-launcher/blob/main/docs/contributing/CODE_SIGNING.md).

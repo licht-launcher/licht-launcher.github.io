@@ -1,9 +1,9 @@
 ---
-title: Contributing overview
+title: How to contribute
 description: How to propose a change, open a pull request and get it reviewed.
 ---
 
-# Contributing overview
+# How to contribute
 
 Thank you for your interest in Licht Launcher. The project has one maintainer, Mateus Neiva ([@mateusneiva](https://github.com/mateusneiva)), who handles development, review of contributions and release decisions.
 
