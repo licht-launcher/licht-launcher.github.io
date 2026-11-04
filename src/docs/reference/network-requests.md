@@ -22,7 +22,7 @@ Hashing and inspecting a file happen locally. A metadata lookup does not upload 
 
 ## Things to know
 
-- **Automatic update checks** are on by default and can be turned off in **Settings > Updater**. See [Updates and uninstall](/docs/getting-started/updates-and-uninstall).
+- **Automatic update checks** are on by default and can be turned off in **Settings > Updater**.
 - **Content lookups** can run automatically when you select a profile, including a prefetch at startup, and when content is shown or refreshed. Results are cached. There is currently no setting to turn these lookups off.
 - **Offline profile** and **disabled update checks** do not stop every request.
 - Launching Minecraft or a mod can cause extra network activity outside the launcher's control.

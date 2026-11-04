@@ -64,8 +64,6 @@ export default defineConfig({
             { text: "Overview", link: "/docs/getting-started/" },
             { text: "Install", link: "/docs/getting-started/install" },
             { text: "Create your first profile", link: "/docs/getting-started/first-profile" },
-            { text: "Modpacks", link: "/docs/getting-started/modpacks" },
-            { text: "Updates and uninstall", link: "/docs/getting-started/updates-and-uninstall" },
           ],
         },
         {
@@ -73,7 +71,6 @@ export default defineConfig({
           items: [
             { text: "Common problems", link: "/docs/troubleshooting/common-problems" },
             { text: "Open an issue", link: "/docs/troubleshooting/open-an-issue" },
-            { text: "Local data and removal", link: "/docs/troubleshooting/local-data" },
             { text: "FAQ", link: "/docs/troubleshooting/faq" },
           ],
         },

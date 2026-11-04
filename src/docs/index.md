@@ -14,14 +14,11 @@ New here? Start with these.
 - [Overview](/docs/getting-started/): what the launcher is and what you need.
 - [Install](/docs/getting-started/install): download and install on Windows or Linux.
 - [Create your first profile](/docs/getting-started/first-profile): prepare a game and press Play.
-- [Modpacks](/docs/getting-started/modpacks): import from Modrinth and CurseForge.
-- [Updates and uninstall](/docs/getting-started/updates-and-uninstall)
 
 ## Troubleshooting
 
 - [Common problems](/docs/troubleshooting/common-problems)
 - [Open an issue](/docs/troubleshooting/open-an-issue)
-- [Local data and removal](/docs/troubleshooting/local-data)
 - [FAQ](/docs/troubleshooting/faq)
 
 ## Reference

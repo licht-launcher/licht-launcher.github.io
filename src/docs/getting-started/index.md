@@ -31,6 +31,5 @@ You do not need to install Java yourself.
 
 1. [Install](/docs/getting-started/install) the launcher for your system.
 2. [Create your first profile](/docs/getting-started/first-profile) and press **Play**.
-3. Read [Updates and uninstall](/docs/getting-started/updates-and-uninstall) when you need them.
 
-For mods, continue with [Modpacks](/docs/getting-started/modpacks), and see [Modloaders](/docs/reference/game-runtime#modloaders) for how Fabric, Quilt, Forge and NeoForge are handled.
+For mods, see [Modloaders](/docs/reference/game-runtime#modloaders) for how Fabric, Quilt, Forge and NeoForge are handled.

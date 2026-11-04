@@ -5,7 +5,7 @@ description: What Licht Launcher keeps on your computer, where it lives and how 
 
 # Data and storage
 
-Licht Launcher keeps its data on your computer. This page explains how that data is organized. To remove it, see [Local data and removal](/docs/troubleshooting/local-data).
+Licht Launcher keeps its data on your computer. This page explains how that data is organized.
 
 ## What is stored
 

@@ -70,7 +70,7 @@ cargo run -p licht-core --features cli --bin licht -- launch --version 1.20.1 --
 
 ## Environment variables
 
-- `LICHT_CURSEFORGE_API_KEY`: enables CurseForge modpack search and import. See [Modpacks](/docs/getting-started/modpacks#curseforge).
+- `LICHT_CURSEFORGE_API_KEY`: enables CurseForge modpack search and import.
 - `LICHT_DATA_DIR`: overrides the profile folder, as described above.
 
 For the details of each area, see the launcher's [runtime](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/RUNTIME.md), [storage](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/STORAGE.md) and [compatibility](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/COMPATIBILITY.md) notes.

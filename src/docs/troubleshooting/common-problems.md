@@ -31,7 +31,7 @@ Run **Install/Repair** on the profile. The loader is only ready while the files 
 
 ### CurseForge results do not appear
 
-CurseForge needs an API key. Set `LICHT_CURSEFORGE_API_KEY` before starting the launcher. See [Modpacks](/docs/getting-started/modpacks#curseforge). Without a key, only Modrinth is searched.
+CurseForge needs an API key. Set `LICHT_CURSEFORGE_API_KEY` before starting the launcher. Without a key, only Modrinth is searched.
 
 ### A CurseForge modpack import stops with a list of mods
 
