@@ -157,3 +157,19 @@
   display: table;
   width: 100%;
 }
+
+.kofi-button {
+  display: inline-block;
+  height: 36px;
+  width: auto;
+}
+
+.VPFooter .kofi-link {
+  display: inline-block;
+  margin-top: 12px;
+  text-decoration: none;
+}
+
+.VPSidebarItem.level-0 > .item > .link[href="https://ko-fi.com/mateusneiva"] {
+  padding-top: 16px;
+}

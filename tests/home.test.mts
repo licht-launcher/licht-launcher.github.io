@@ -63,6 +63,30 @@ for (const page of ["index.html", "privacy.html", "terms.html"]) {
   });
 }
 
+const kofiLink = /<a [^>]*href="https:\/\/ko-fi.com\/mateusneiva"[^>]*>[\s\S]*?<img [^>]*src="\/kofi-button.png"[^>]*alt="Buy me a coffee on Ko-fi"[^>]*>/;
+
+for (const page of ["index.html", "privacy.html", "terms.html"]) {
+  test(`${page} footer links to Ko-fi with the locally hosted button`, async () => {
+    const html = await readFile(new URL(page, dist), "utf8");
+    const footer = html.match(/<footer class="VPFooter"[\s\S]*?<\/footer>/)?.[0];
+    assert.ok(footer);
+    assert.match(footer, kofiLink);
+    assert.match(footer, /<a class="kofi-link" href="https:\/\/ko-fi.com\/mateusneiva" target="_blank" rel="noopener">/);
+  });
+}
+
+test("the docs sidebar ends with the Ko-fi button", async () => {
+  const html = await readFile(new URL("docs/getting-started/install.html", dist), "utf8");
+  const sidebar = html.match(/<aside class="VPSidebar"[\s\S]*?<\/aside>/)?.[0];
+  assert.ok(sidebar);
+  assert.match(sidebar, kofiLink);
+});
+
+test("the Ko-fi button is published as a PNG image", async () => {
+  const image = await readFile(new URL("kofi-button.png", dist));
+  assert.equal(image.subarray(0, 8).toString("hex"), "89504e470d0a1a0a");
+});
+
 test("the production stylesheet includes all seven local icon assets", async () => {
   const html = await readFile(new URL("index.html", dist), "utf8");
   const stylesheet = html.match(/href="([^"]*\/assets\/style\.[^"]+\.css)"/)?.[1];
