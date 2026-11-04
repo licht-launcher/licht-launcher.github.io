@@ -17,7 +17,7 @@ New here? Start with these.
 
 ## Troubleshooting
 
-- [Common problems](/docs/troubleshooting/common-problems)
+- [Common issues](/docs/troubleshooting/common-issues)
 - [Open an issue](/docs/troubleshooting/open-an-issue)
 - [FAQ](/docs/troubleshooting/faq)
 

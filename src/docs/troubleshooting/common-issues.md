@@ -1,9 +1,9 @@
 ---
-title: Common problems
+title: Common issues
 description: Fixes and explanations for the problems most likely to come up.
 ---
 
-# Common problems
+# Common issues
 
 If your problem is not here, see [Open an issue](/docs/troubleshooting/open-an-issue).
 
@@ -29,10 +29,6 @@ Remove it in **Settings**. This deletes the stored credentials from the credenti
 
 Run **Install/Repair** on the profile. The loader is only ready while the files recorded during installation still match what is on disk, so a missing or modified file is repaired by running it again. If it keeps failing, [report it](/docs/troubleshooting/open-an-issue) with the game and loader versions.
 
-### CurseForge results do not appear
-
-CurseForge needs an API key. Set `LICHT_CURSEFORGE_API_KEY` before starting the launcher. Without a key, only Modrinth is searched.
-
 ### A CurseForge modpack import stops with a list of mods
 
 Those mods' authors disabled downloads outside CurseForge, so the launcher refuses to import the pack. The error names each blocked mod. There is no workaround inside the launcher.
@@ -43,7 +39,6 @@ Packs may only download files from `cdn.modrinth.com`. A pack that points to ano
 
 ## Known limitations
 
-- **Linux graphical launch** has not been re-checked in the latest compatibility pass. Compilation and tests run on Windows and Ubuntu.
-- **Older versions** (for example 1.5.2) start through a legacy launch path. One legacy session argument is still passed unfilled, which is a known gap.
+- **Linux graphical launch** has not been re-checked in the latest compatibility pass.
 - **Garbled accents in game logs** can happen on older Java versions, because Java 17 and older write the whole log in one encoding. Newer Java uses UTF-8.
 - **Installing individual mods** from inside the launcher is not available yet. See [Installed content](/docs/getting-started/first-profile#installed-content).
