@@ -20,7 +20,7 @@ Portable downloads are also available for Windows and Linux.
 Run the `.exe` installer and follow the prompts.
 
 ::: info Publisher signing
-Windows publisher signing is not available yet, so Windows may not show a verified publisher for the installer. Updates inside the launcher are verified with the launcher's own signing key. See the [code signing policy](https://github.com/mateusneiva/licht-launcher/blob/main/docs/contributing/CODE_SIGNING.md) for details.
+Windows publisher signing is not available yet, so Windows may not show a verified publisher for the installer. Updates inside the launcher are verified with the launcher's own signing key. See the [code signing policy](/docs/contributing/code-signing) for details.
 :::
 
 ## Linux
