@@ -29,10 +29,6 @@ Features and compatibility are still being refined, and you may find bugs. Repor
 
 No. Sign-in happens in your browser on Microsoft's own pages.
 
-## Can I play without a Microsoft account?
-
-Yes, with an offline profile. It does not authenticate you with online services.
-
 ## Do I need to install Java?
 
 No. The launcher downloads the Java runtime each game version needs. See [Create your first profile](/docs/getting-started/first-profile).

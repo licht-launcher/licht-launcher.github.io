@@ -69,7 +69,7 @@ export default defineConfig({
         {
           text: "Troubleshooting",
           items: [
-            { text: "Common problems", link: "/docs/troubleshooting/common-problems" },
+            { text: "Common issues", link: "/docs/troubleshooting/common-issues" },
             { text: "Open an issue", link: "/docs/troubleshooting/open-an-issue" },
             { text: "FAQ", link: "/docs/troubleshooting/faq" },
           ],
