@@ -13,7 +13,7 @@ A profile (an instance) is one Minecraft setup with its own game version, files,
 2. Choose how to start:
    - a **vanilla** game version, or
    - a game version with a **modloader** (Fabric, Quilt, Forge or NeoForge), or
-   - a **modpack** from Modrinth or CurseForge. See [Modpacks](/docs/getting-started/modpacks).
+   - a **modpack** from Modrinth or CurseForge.
 3. Create the profile and let the launcher prepare the game files.
 4. Select **Play**.
 
@@ -47,7 +47,7 @@ What works today:
 - **Removing** items.
 - **Game settings and logs** for the profile, from the launcher itself.
 
-Installing, updating and resolving dependencies for individual mods from inside the launcher is still in development. It is tracked as item 9.2 on the [roadmap](/docs/contributing/roadmap). Until then, [modpacks](/docs/getting-started/modpacks) are the way to get a complete set of mods into a profile.
+Installing, updating and resolving dependencies for individual mods from inside the launcher is still in development. It is tracked as item 9.2 on the [roadmap](/docs/contributing/roadmap). Until then, import a modpack to get a complete set of mods into a profile.
 
 ::: info Back up your worlds
 Profiles hold your worlds and other user files. Back up anything you care about before removing content or deleting a profile.
@@ -55,6 +55,4 @@ Profiles hold your worlds and other user files. Back up anything you care about 
 
 ## Next
 
-- [Modpacks](/docs/getting-started/modpacks)
 - [Modloaders](/docs/reference/game-runtime#modloaders)
-- [Updates and uninstall](/docs/getting-started/updates-and-uninstall)

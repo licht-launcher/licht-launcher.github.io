@@ -47,7 +47,7 @@ Not at the moment. Importing from other launchers is only an idea on the [roadma
 
 ## Can I install single mods from the launcher?
 
-Not yet. Use [modpacks](/docs/getting-started/modpacks) for now. See [Installed content](/docs/getting-started/first-profile#installed-content).
+Not yet. Use modpacks for now. See [Installed content](/docs/getting-started/first-profile#installed-content).
 
 ## How can I support the project?
 

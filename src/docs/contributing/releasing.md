@@ -65,4 +65,3 @@ Never commit or log the private key. Installed applications accept updates signe
 - **Later** dismisses the ready notification without deleting the package or changing preferences. Closing and reopening the app never installs an update by itself.
 - A failed update leaves the installed launcher working and offers a retry.
 
-For the user-facing steps, see [Updates and uninstall](/docs/getting-started/updates-and-uninstall).

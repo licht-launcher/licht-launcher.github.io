@@ -46,7 +46,7 @@ This page summarizes the launcher's roadmap. The roadmap in the launcher reposit
 
 ## Already in place
 
-- <Badge type="tip" text="Done" /> Modrinth modpack search and `.mrpack` import, and CurseForge import with an API key. See [Modpacks](/docs/getting-started/modpacks).
+- <Badge type="tip" text="Done" /> Modrinth modpack search and `.mrpack` import, and CurseForge import with an API key.
 - <Badge type="tip" text="Done" /> Automatic updates with signed packages. See [Releasing](/docs/contributing/releasing).
 - <Badge type="tip" text="Done" /> No product analytics and no automatic crash-report uploads.
 
