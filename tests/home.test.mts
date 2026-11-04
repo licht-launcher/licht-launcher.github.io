@@ -58,7 +58,7 @@ for (const page of ["index.html", "privacy.html", "terms.html"]) {
     const footer = html.match(/<footer class="VPFooter"[\s\S]*?<\/footer>/)?.[0];
     assert.ok(footer);
     assert.match(footer, /not affiliated with Mojang Studios or Microsoft/);
-    assert.match(footer, /<a href="\/privacy.html">Privacy Policy<\/a>/);
+    assert.match(footer, /<a href="\/privacy">Privacy Policy<\/a>/);
     assert.match(footer, /<a href="https:\/\/github.com\/mateusneiva\/licht-launcher\/blob\/main\/LICENSE">MIT License<\/a>/);
   });
 }

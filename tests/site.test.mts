@@ -19,16 +19,19 @@ for (const page of pages) {
   test(`${page} publishes working project-relative links and assets`, async () => {
     const html = await readFile(new URL(page, dist), "utf8");
     assert.match(html, /not affiliated with Mojang Studios or Microsoft/);
-    assert.ok(html.includes(`href="${base}privacy.html"`));
-    assert.ok(html.includes(`href="${base}terms.html"`));
+    assert.ok(html.includes(`href="${base}privacy"`));
+    assert.ok(html.includes(`href="${base}terms"`));
     assert.ok(!html.includes('href="/licht-launcher/'), `${page}: obsolete project base`);
 
     for (const [, attribute, value] of html.matchAll(/\b(href|src)="([^"]+)"/g)) {
       if (/^(?:[a-z]+:|\/\/)/i.test(value)) continue;
-      const url = new URL(value, `https://example.test${base}${page}`);
+      const pagePath = page.replace(/(^|\/)index\.html$/, "$1").replace(/\.html$/, "");
+      const url = new URL(value, `https://example.test${base}${pagePath}`);
       assert.ok(url.pathname.startsWith(base), `${page}: outside project base: ${value}`);
+      assert.ok(!url.pathname.endsWith(".html"), `${page}: link exposes .html: ${value}`);
       const relative = url.pathname.slice(base.length);
-      const targetPath = relative === "" || relative.endsWith("/") ? `${relative}index.html` : relative;
+      const isAsset = /\.[a-z0-9]+$/i.test(relative);
+      const targetPath = relative === "" || relative.endsWith("/") ? `${relative}index.html` : isAsset ? relative : `${relative}.html`;
       const target = await readFile(new URL(targetPath, dist));
       if (attribute === "href" && url.hash && targetPath.endsWith(".html")) {
         assert.ok(
@@ -46,7 +49,7 @@ test("published policies include the canonical content and resolve repository li
   assert.match(privacy, /There is currently no dedicated switch/);
   assert.match(privacy, /href="https:\/\/github.com\/mateusneiva\/licht-launcher\/blob\/main\/README.md#uninstall"/);
   assert.match(terms, /href="https:\/\/github.com\/mateusneiva\/licht-launcher\/blob\/main\/LICENSE"/);
-  assert.ok(terms.includes(`href="${base}privacy.html#retention-and-deletion"`));
+  assert.ok(terms.includes(`href="${base}privacy#retention-and-deletion"`));
   assert.match(terms, /These terms do not replace the MIT License/);
 });
 
