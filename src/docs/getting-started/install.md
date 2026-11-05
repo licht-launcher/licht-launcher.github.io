@@ -5,7 +5,7 @@ description: "Download and install Licht Launcher, a free Minecraft: Java Editio
 
 # Install
 
-Download the package for your system from the [latest release page](https://github.com/mateusneiva/licht-launcher/releases/latest). The same page has the release notes.
+Download the package for your system from the [latest release page](https://github.com/licht-launcher/licht-launcher/releases/latest). The same page has the release notes.
 
 <DownloadTable />
 

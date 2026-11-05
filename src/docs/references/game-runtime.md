@@ -113,4 +113,4 @@ Minecraft 26.x lays natives out differently from older versions, and the launche
 
 ## Technical details
 
-The full notes are in the launcher's [loaders documentation](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/LOADERS.md), [runtime documentation](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/RUNTIME.md) and [compatibility documentation](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/COMPATIBILITY.md).
+The full notes are in the launcher's [loaders documentation](https://github.com/licht-launcher/licht-launcher/blob/main/docs/internals/LOADERS.md), [runtime documentation](https://github.com/licht-launcher/licht-launcher/blob/main/docs/internals/RUNTIME.md) and [compatibility documentation](https://github.com/licht-launcher/licht-launcher/blob/main/docs/internals/COMPATIBILITY.md).

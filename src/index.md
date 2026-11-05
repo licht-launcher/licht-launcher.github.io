@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: Download on GitHub
-      link: https://github.com/mateusneiva/licht-launcher/releases/latest
+      link: https://github.com/licht-launcher/licht-launcher/releases/latest
     - theme: alt
       text: Documentation
       link: /docs/

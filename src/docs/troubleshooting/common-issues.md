@@ -14,7 +14,7 @@ If your problem is not here, see [Open an issue](/docs/troubleshooting/open-an-i
 **Cause:** Windows publisher signing is not available yet, so the installer shows an unknown publisher. This is expected.
 
 ::: tip What to do
-1. Download the installer only from the [official releases page](https://github.com/mateusneiva/licht-launcher/releases/latest).
+1. Download the installer only from the [official releases page](https://github.com/licht-launcher/licht-launcher/releases/latest).
 2. If Windows warns about the file, select **More info**, then **Run anyway**.
 3. Later updates inside the launcher are verified with the launcher's signing key, so you do not need to repeat this check for them.
 :::

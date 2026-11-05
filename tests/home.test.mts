@@ -17,7 +17,7 @@ test("the homepage renders four feature cards with decorative icons", async () =
 
 test("primary actions retain their accessible labels and destinations", async () => {
   const html = await readFile(new URL("index.html", dist), "utf8");
-  assert.match(html, /<a class="VPButton medium brand" href="https:\/\/github.com\/mateusneiva\/licht-launcher\/releases\/latest"[^>]*>Download on GitHub<\/a>/);
+  assert.match(html, /<a class="VPButton medium brand" href="https:\/\/github.com\/licht-launcher\/licht-launcher\/releases\/latest"[^>]*>Download on GitHub<\/a>/);
   assert.match(html, /<a class="VPButton medium alt" href="\/docs\/"[^>]*>Documentation<\/a>/);
   assert.doesNotMatch(html, />View source</);
 });
@@ -26,7 +26,7 @@ test("the navbar links to the GitHub repository through an icon", async () => {
   const html = await readFile(new URL("index.html", dist), "utf8");
   const social = html.match(/<div class="VPSocialLinks[\s\S]*?<\/div>/)?.[0];
   assert.ok(social);
-  assert.match(social, /href="https:\/\/github.com\/mateusneiva\/licht-launcher"/);
+  assert.match(social, /href="https:\/\/github.com\/licht-launcher\/licht-launcher"/);
   assert.match(social, /aria-label="github"/);
 });
 
@@ -59,7 +59,7 @@ for (const page of ["index.html", "privacy-policy.html", "terms-of-use.html"]) {
     assert.match(footer, /not affiliated with Mojang Studios or Microsoft/);
     assert.match(footer, /<a href="\/privacy-policy">Privacy Policy<\/a>/);
     assert.match(footer, /<a href="\/terms-of-use">Terms of Use<\/a>/);
-    assert.match(footer, /<a href="https:\/\/github.com\/mateusneiva\/licht-launcher\/blob\/main\/LICENSE">MIT License<\/a>/);
+    assert.match(footer, /<a href="https:\/\/github.com\/licht-launcher\/licht-launcher\/blob\/main\/LICENSE">MIT License<\/a>/);
   });
 }
 

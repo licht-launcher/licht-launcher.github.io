@@ -43,4 +43,4 @@ Official builds ship the client ID inside the program, so players need no setup.
 
 ## Technical details
 
-The full notes are in the launcher's [Microsoft authentication documentation](https://github.com/mateusneiva/licht-launcher/blob/main/docs/integrations/MICROSOFT.md).
+The full notes are in the launcher's [Microsoft authentication documentation](https://github.com/licht-launcher/licht-launcher/blob/main/docs/integrations/MICROSOFT.md).

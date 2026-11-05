@@ -52,4 +52,4 @@ An offline profile gets a stable player identity from its username, so the same 
 
 ## Technical details
 
-The full notes are in the launcher's [compatibility documentation](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/COMPATIBILITY.md).
+The full notes are in the launcher's [compatibility documentation](https://github.com/licht-launcher/licht-launcher/blob/main/docs/internals/COMPATIBILITY.md).

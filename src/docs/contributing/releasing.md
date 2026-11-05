@@ -5,7 +5,7 @@ description: "How Licht Launcher releases work: version codenames, release rules
 
 # Releasing
 
-Releases are produced by CI from a tag and published on [GitHub Releases](https://github.com/mateusneiva/licht-launcher/releases). Commits follow [Conventional Commits](https://www.conventionalcommits.org/).
+Releases are produced by CI from a tag and published on [GitHub Releases](https://github.com/licht-launcher/licht-launcher/releases). Commits follow [Conventional Commits](https://www.conventionalcommits.org/).
 
 ## Codenames
 
@@ -25,7 +25,7 @@ Each `0.x` release is named after a flower, in German, in this order:
 
 </div>
 
-A check (✓) marks a codename already used by a published release. The [GitHub Releases](https://github.com/mateusneiva/licht-launcher/releases) page lists every version.
+A check (✓) marks a codename already used by a published release. The [GitHub Releases](https://github.com/licht-launcher/licht-launcher/releases) page lists every version.
 
 From 0.8 on, the list continues and is decided with the project owner.
 

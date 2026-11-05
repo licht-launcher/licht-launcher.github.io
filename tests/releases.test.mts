@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { fetchLatestRelease, parseRelease } from "../.vitepress/theme/releases.mts";
 
-const base = "https://github.com/mateusneiva/licht-launcher/releases/download/v0.2.3/";
+const base = "https://github.com/licht-launcher/licht-launcher/releases/download/v0.2.3/";
 const names = [
   "latest.json",
   "Licht-Launcher-0.2.3-Iris-linux-x64-portable",
@@ -55,8 +55,8 @@ test("requests the latest release of the launcher, sending the token when given"
   await fetchLatestRelease({ fetchRelease, wait: noWait, token: "secret" });
   await fetchLatestRelease({ fetchRelease, wait: noWait });
   assert.deepEqual(requests, [
-    { url: "https://api.github.com/repos/mateusneiva/licht-launcher/releases/latest", authorization: "Bearer secret" },
-    { url: "https://api.github.com/repos/mateusneiva/licht-launcher/releases/latest", authorization: null },
+    { url: "https://api.github.com/repos/licht-launcher/licht-launcher/releases/latest", authorization: "Bearer secret" },
+    { url: "https://api.github.com/repos/licht-launcher/licht-launcher/releases/latest", authorization: null },
   ]);
 });
 

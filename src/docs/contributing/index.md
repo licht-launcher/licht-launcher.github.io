@@ -7,7 +7,7 @@ description: "Contribute to Licht Launcher, an open-source Minecraft launcher: h
 
 Thank you for your interest in Licht Launcher. The project has one maintainer, Mateus Neiva ([@mateusneiva](https://github.com/mateusneiva)), who handles development, review of contributions and release decisions.
 
-The launcher is open source under the [MIT License](https://github.com/mateusneiva/licht-launcher/blob/main/LICENSE). The canonical guide is [CONTRIBUTING.md](https://github.com/mateusneiva/licht-launcher/blob/main/CONTRIBUTING.md) in the launcher repository; this section explains it in more detail.
+The launcher is open source under the [MIT License](https://github.com/licht-launcher/licht-launcher/blob/main/LICENSE). The canonical guide is [CONTRIBUTING.md](https://github.com/licht-launcher/licht-launcher/blob/main/CONTRIBUTING.md) in the launcher repository; this section explains it in more detail.
 
 ## In this section
 
@@ -20,7 +20,7 @@ The launcher is open source under the [MIT License](https://github.com/mateusnei
 ## Proposing a change
 
 1. Read the [roadmap](/docs/contributing/roadmap) and the [architecture](/docs/contributing/architecture) first.
-2. Open an [issue](https://github.com/mateusneiva/licht-launcher/issues) describing the bug or the idea. For a bug, include the steps to reproduce, your operating system, the launcher version and the relevant game and loader version. Redact personal information from logs and screenshots.
+2. Open an [issue](https://github.com/licht-launcher/licht-launcher/issues) describing the bug or the idea. For a bug, include the steps to reproduce, your operating system, the launcher version and the relevant game and loader version. Redact personal information from logs and screenshots.
 3. For non-trivial changes, agree on a short plan and scope with the maintainer before you implement it. Work on one item at a time.
 
 Discuss these before writing code:

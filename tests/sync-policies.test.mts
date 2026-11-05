@@ -28,8 +28,8 @@ test("imports the canonical documents from the launcher's main branch", async (t
     },
   });
   assert.deepEqual(requested.sort(), [
-    "https://raw.githubusercontent.com/mateusneiva/licht-launcher/main/PRIVACY.md",
-    "https://raw.githubusercontent.com/mateusneiva/licht-launcher/main/TERMS.md",
+    "https://raw.githubusercontent.com/licht-launcher/licht-launcher/main/PRIVACY.md",
+    "https://raw.githubusercontent.com/licht-launcher/licht-launcher/main/TERMS.md",
   ]);
   assert.equal(await readFile(new URL("PRIVACY.md", destination), "utf8"), privacy);
   assert.equal(await readFile(new URL("TERMS.md", destination), "utf8"), terms);

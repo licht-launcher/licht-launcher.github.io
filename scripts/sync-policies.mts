@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 
-const source = "https://raw.githubusercontent.com/mateusneiva/licht-launcher/main/";
+const source = "https://raw.githubusercontent.com/licht-launcher/licht-launcher/main/";
 const documents = [
   { name: "PRIVACY.md", heading: "# Privacy Policy" },
   { name: "TERMS.md", heading: "# Terms of Use" },

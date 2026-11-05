@@ -1,6 +1,6 @@
 import { defineConfig, type HeadConfig } from "vitepress";
 
-const repository = "https://github.com/mateusneiva/licht-launcher";
+const repository = "https://github.com/licht-launcher/licht-launcher";
 const website = "https://licht-launcher.github.io/";
 const kofi = "https://ko-fi.com/mateusneiva";
 const kofiButton = '<img class="kofi-button" src="/kofi-button.png" alt="Buy me a coffee on Ko-fi" width="143" height="36">';
