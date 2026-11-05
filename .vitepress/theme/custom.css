@@ -36,8 +36,6 @@
 
 .VPHomeHero.VPHero.has-image .main {
   order: 2;
-  position: relative;
-  z-index: 1;
   width: 100%;
 }
 
@@ -49,25 +47,18 @@
 }
 
 .VPHomeHero.VPHero.has-image .image-container {
-  position: relative;
   width: var(--home-hero-logo-size);
   height: var(--home-hero-logo-size);
   transform: none;
 }
 
 .VPHomeHero.VPHero.has-image .image-src {
-  position: relative;
-  inset: auto;
+  position: static;
   width: 100%;
   height: 100%;
   max-width: 100%;
   max-height: 100%;
   transform: none;
-}
-
-.VPHomeHero.VPHero.has-image .image-bg {
-  width: calc(var(--home-hero-logo-size) * 1.6);
-  height: calc(var(--home-hero-logo-size) * 1.6);
 }
 
 .VPHomeHero.VPHero.has-image .name,
@@ -192,13 +183,4 @@
 
 .VPNavBarMenuLink .kofi-button {
   vertical-align: middle;
-}
-
-:root {
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--licht-green-400) 50%, var(--licht-green-300) 50%);
-  --vp-home-hero-image-filter: blur(44px);
-}
-
-.dark {
-  --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--licht-green-500) 50%, var(--licht-green-300) 50%);
 }
