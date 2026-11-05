@@ -7,7 +7,7 @@ description: "Answers to common questions about Licht Launcher: is it free and o
 
 ## Is Licht Launcher free?
 
-Yes. It is free and open source under the [MIT License](https://github.com/mateusneiva/licht-launcher/blob/main/LICENSE).
+Yes. It is free and open source under the [MIT License](https://github.com/licht-launcher/licht-launcher/blob/main/LICENSE).
 
 ## Do I need to buy Minecraft?
 

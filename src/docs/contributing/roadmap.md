@@ -7,7 +7,7 @@ description: "The Licht Launcher roadmap: what the Minecraft launcher already do
 
 **9 of 11 phases are complete.** The other two, mods and modpacks and polish and distribution, are active. The next major milestone is a public **v1.0**.
 
-This page summarizes the launcher's roadmap. The roadmap in the launcher repository is the source of truth and changes more often than this page, so check [ROADMAP.md](https://github.com/mateusneiva/licht-launcher/blob/main/docs/ROADMAP.md) for the latest status.
+This page summarizes the launcher's roadmap. The roadmap in the launcher repository is the source of truth and changes more often than this page, so check [ROADMAP.md](https://github.com/licht-launcher/licht-launcher/blob/main/docs/ROADMAP.md) for the latest status.
 
 ## Status by phase
 
@@ -69,4 +69,4 @@ These ideas are outside the current scope and are not planned for the initial re
 
 ## Helping out
 
-Pick an open item, or propose your own, in an [issue](https://github.com/mateusneiva/licht-launcher/issues). For items marked as needing approval, agree on a plan with the maintainer first. See [How to contribute](/docs/contributing/).
+Pick an open item, or propose your own, in an [issue](https://github.com/licht-launcher/licht-launcher/issues). For items marked as needing approval, agree on a plan with the maintainer first. See [How to contribute](/docs/contributing/).

@@ -7,7 +7,7 @@ description: "How to report a Licht Launcher bug: where to find the logs, how to
 
 ## Report a problem
 
-[Open an issue](https://github.com/mateusneiva/licht-launcher/issues) on GitHub. Issues are public, so keep personal data out of them. Include:
+[Open an issue](https://github.com/licht-launcher/licht-launcher/issues) on GitHub. Issues are public, so keep personal data out of them. Include:
 
 - your launcher version and operating system;
 - the Minecraft version, and the loader and its version if you use one;

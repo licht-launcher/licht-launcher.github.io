@@ -51,4 +51,4 @@ Choose a different location in **Settings > Downloads > Application directory**.
 
 ## Technical details
 
-The full notes are in the launcher's [storage documentation](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/STORAGE.md).
+The full notes are in the launcher's [storage documentation](https://github.com/licht-launcher/licht-launcher/blob/main/docs/internals/STORAGE.md).

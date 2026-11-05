@@ -1,4 +1,4 @@
-const endpoint = new URL("https://api.github.com/repos/mateusneiva/licht-launcher/releases/latest");
+const endpoint = new URL("https://api.github.com/repos/licht-launcher/licht-launcher/releases/latest");
 const maxAttempts = 3;
 
 export interface Download {

@@ -52,11 +52,11 @@ The core is testable on its own with `cargo test -p licht-core`. Integration tes
 
 These documents live in the launcher repository:
 
-- [Storage](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/STORAGE.md): profile and content directories, the SQLite service and instance persistence.
-- [Runtime](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/RUNTIME.md): Java selection, installation and discovery.
-- [Loaders](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/LOADERS.md): loader profiles and Forge and NeoForge processors.
-- [Compatibility](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/COMPATIBILITY.md): manifest formats, legacy execution, native libraries, assets, logs and known gaps.
-- Integrations: [Microsoft](https://github.com/mateusneiva/licht-launcher/blob/main/docs/integrations/MICROSOFT.md), [Modrinth](https://github.com/mateusneiva/licht-launcher/blob/main/docs/integrations/MODRINTH.md) and [CurseForge](https://github.com/mateusneiva/licht-launcher/blob/main/docs/integrations/CURSEFORGE.md).
+- [Storage](https://github.com/licht-launcher/licht-launcher/blob/main/docs/internals/STORAGE.md): profile and content directories, the SQLite service and instance persistence.
+- [Runtime](https://github.com/licht-launcher/licht-launcher/blob/main/docs/internals/RUNTIME.md): Java selection, installation and discovery.
+- [Loaders](https://github.com/licht-launcher/licht-launcher/blob/main/docs/internals/LOADERS.md): loader profiles and Forge and NeoForge processors.
+- [Compatibility](https://github.com/licht-launcher/licht-launcher/blob/main/docs/internals/COMPATIBILITY.md): manifest formats, legacy execution, native libraries, assets, logs and known gaps.
+- Integrations: [Microsoft](https://github.com/licht-launcher/licht-launcher/blob/main/docs/integrations/MICROSOFT.md), [Modrinth](https://github.com/licht-launcher/licht-launcher/blob/main/docs/integrations/MODRINTH.md) and [CurseForge](https://github.com/licht-launcher/licht-launcher/blob/main/docs/integrations/CURSEFORGE.md).
 
 ## References
 

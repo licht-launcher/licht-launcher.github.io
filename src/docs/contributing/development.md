@@ -73,7 +73,7 @@ cargo run -p licht-core --features cli --bin licht -- launch --version 1.20.1 --
 - `LICHT_CURSEFORGE_API_KEY`: enables CurseForge modpack search and import.
 - `LICHT_DATA_DIR`: overrides the profile folder, as described above.
 
-For the details of each area, see the launcher's [runtime](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/RUNTIME.md), [storage](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/STORAGE.md) and [compatibility](https://github.com/mateusneiva/licht-launcher/blob/main/docs/internals/COMPATIBILITY.md) notes.
+For the details of each area, see the launcher's [runtime](https://github.com/licht-launcher/licht-launcher/blob/main/docs/internals/RUNTIME.md), [storage](https://github.com/licht-launcher/licht-launcher/blob/main/docs/internals/STORAGE.md) and [compatibility](https://github.com/licht-launcher/licht-launcher/blob/main/docs/internals/COMPATIBILITY.md) notes.
 
 ## Conventions
 
@@ -84,7 +84,7 @@ For the details of each area, see the launcher's [runtime](https://github.com/ma
 - Keep the interface keyboard-accessible and compatible with Windows WebView2 and Linux WebKitGTK.
 - Generate shared Rust and TypeScript types with the existing `ts-rs` process. Do not duplicate them by hand.
 - Keep tokens in the operating system keyring and out of logs.
-- Document changes to external requests, local storage or data handling in the [Privacy Policy](https://github.com/mateusneiva/licht-launcher/blob/main/PRIVACY.md).
+- Document changes to external requests, local storage or data handling in the [Privacy Policy](https://github.com/licht-launcher/licht-launcher/blob/main/PRIVACY.md).
 
 ## Tests
 

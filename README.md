@@ -14,7 +14,7 @@
   <a href="https://licht-launcher.github.io/">Visit the website</a> ·
   <a href="https://licht-launcher.github.io/privacy-policy">Privacy Policy</a> ·
   <a href="https://licht-launcher.github.io/terms-of-use">Terms of Use</a> ·
-  <a href="https://github.com/mateusneiva/licht-launcher">Launcher repository</a>
+  <a href="https://github.com/licht-launcher/licht-launcher">Launcher repository</a>
 </p>
 
 ---
@@ -96,8 +96,8 @@ Privacy and Terms are maintained in the **launcher repository**:
 
 | Document | Canonical source | Published page |
 | --- | --- | --- |
-| Privacy Policy | [PRIVACY.md](https://github.com/mateusneiva/licht-launcher/blob/main/PRIVACY.md) | [Privacy](https://licht-launcher.github.io/privacy-policy) |
-| Terms of Use | [TERMS.md](https://github.com/mateusneiva/licht-launcher/blob/main/TERMS.md) | [Terms](https://licht-launcher.github.io/terms-of-use) |
+| Privacy Policy | [PRIVACY.md](https://github.com/licht-launcher/licht-launcher/blob/main/PRIVACY.md) | [Privacy](https://licht-launcher.github.io/privacy-policy) |
+| Terms of Use | [TERMS.md](https://github.com/licht-launcher/licht-launcher/blob/main/TERMS.md) | [Terms](https://licht-launcher.github.io/terms-of-use) |
 
 Development and production builds download both documents from the launcher's
 `main` branch. The pages in `src/` include them directly; edit the canonical

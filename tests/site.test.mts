@@ -39,8 +39,8 @@ test("published policies include the canonical content and resolve repository li
   const privacy = await readFile(new URL("privacy-policy.html", dist), "utf8");
   const terms = await readFile(new URL("terms-of-use.html", dist), "utf8");
   assert.match(privacy, /There is currently no dedicated switch/);
-  assert.match(privacy, /href="https:\/\/github.com\/mateusneiva\/licht-launcher\/blob\/main\/README.md#uninstall"/);
-  assert.match(terms, /href="https:\/\/github.com\/mateusneiva\/licht-launcher\/blob\/main\/LICENSE"/);
+  assert.match(privacy, /href="https:\/\/github.com\/licht-launcher\/licht-launcher\/blob\/main\/README.md#uninstall"/);
+  assert.match(terms, /href="https:\/\/github.com\/licht-launcher\/licht-launcher\/blob\/main\/LICENSE"/);
   assert.ok(terms.includes(`href="${base}privacy-policy#retention-and-deletion"`));
   assert.match(terms, /These terms do not replace the MIT License/);
 });
