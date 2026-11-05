@@ -95,6 +95,7 @@ export default defineConfig({
       { text: "Download", link: `${repository}/releases/latest` },
       { text: kofiButton, link: kofi },
     ],
+    socialLinks: [{ icon: "github", link: repository }],
     sidebar: {
       "/docs/": [
         {
