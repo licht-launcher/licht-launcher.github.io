@@ -73,7 +73,3 @@ Installing, updating and resolving dependencies for individual mods from inside 
 ::: info Back up your worlds
 Profiles hold your worlds and other user files. Back up anything you care about before removing content or deleting a profile.
 :::
-
-## Next
-
-- [Modloaders](/docs/references/game-runtime#modloaders)

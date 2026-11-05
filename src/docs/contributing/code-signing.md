@@ -17,11 +17,15 @@ Releases currently publish Tauri **updater signatures**. They let the updater ve
 
 Licht Launcher is a single-maintainer project:
 
+<div class="wide-table">
+
 | Role | Responsible person |
 | --- | --- |
 | Author and committer | [Mateus Neiva (@mateusneiva)](https://github.com/mateusneiva) |
 | Reviewer of external contributions | [Mateus Neiva (@mateusneiva)](https://github.com/mateusneiva) |
 | Release and code-signing approver | [Mateus Neiva (@mateusneiva)](https://github.com/mateusneiva) |
+
+</div>
 
 One person holds all three roles. The project has no independent reviewer at the moment.
 
