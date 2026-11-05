@@ -15,9 +15,6 @@ hero:
     - theme: alt
       text: Documentation
       link: /docs/
-    - theme: alt
-      text: View source
-      link: https://github.com/mateusneiva/licht-launcher
 
 features:
   - icon: <span class="home-feature-icon home-icon-instances" aria-hidden="true"></span>

@@ -43,11 +43,15 @@ Profiles created by older versions with a provisional Forge or NeoForge placehol
 
 These were launched offline on Windows with an isolated cache:
 
+<div class="wide-table">
+
 | Loader | Minecraft | Build |
 | --- | --- | --- |
 | Forge | 1.12.2 | 14.23.5.2860 |
 | Forge | 1.20.1 | 47.3.0 |
 | NeoForge | 1.21.1 | 21.1.80 |
+
+</div>
 
 ::: warning Coverage
 These checks do not cover every Minecraft and loader combination. Linux graphical launch has not been re-checked yet, although the build and tests run on Windows and Ubuntu.
@@ -61,12 +65,16 @@ Licht Launcher downloads and manages its own Java runtime, so you do not need to
 
 Each Minecraft version declares the Java major version it needs in its version data, and the launcher follows that.
 
+<div class="wide-table">
+
 | Minecraft | Java |
 | --- | --- |
 | 1.5.2, 1.7.2, 1.8.9, 1.12.2 | 8 |
 | 1.20.1 | 17 |
 | 1.21.11 | 21 |
 | 26.3 | 25 |
+
+</div>
 
 When a version does not declare it, the launcher falls back to a rule based on the release id:
 
@@ -101,7 +109,7 @@ Modloaders add their own libraries. Fabric and Quilt profiles list them in the l
 
 Natives are the platform libraries the game needs, such as the ones for graphics and audio. The launcher selects them for your operating system, for `x86` and `x86_64`. Arm64 is not supported.
 
-Minecraft 26.x lays natives out differently from older versions, and the launcher adjusts the library path to match. See [Compatibility](/docs/reference/compatibility).
+Minecraft 26.x lays natives out differently from older versions, and the launcher adjusts the library path to match. See [Compatibility](/docs/references/compatibility).
 
 ## Technical details
 

@@ -95,6 +95,7 @@ export default defineConfig({
       { text: "Download", link: `${repository}/releases/latest` },
       { text: kofiButton, link: kofi },
     ],
+    socialLinks: [{ icon: "github", link: repository }],
     sidebar: {
       "/docs/": [
         {
@@ -116,11 +117,11 @@ export default defineConfig({
         {
           text: "References",
           items: [
-            { text: "Compatibility", link: "/docs/reference/compatibility" },
-            { text: "Game runtime", link: "/docs/reference/game-runtime" },
-            { text: "Data and storage", link: "/docs/reference/data-and-storage" },
-            { text: "Network requests", link: "/docs/reference/network-requests" },
-            { text: "Authentication", link: "/docs/reference/authentication" },
+            { text: "Compatibility", link: "/docs/references/compatibility" },
+            { text: "Game runtime", link: "/docs/references/game-runtime" },
+            { text: "Data and storage", link: "/docs/references/data-and-storage" },
+            { text: "Network requests", link: "/docs/references/network-requests" },
+            { text: "Authentication", link: "/docs/references/authentication" },
           ],
         },
         {

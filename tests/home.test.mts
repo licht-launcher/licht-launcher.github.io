@@ -19,7 +19,15 @@ test("primary actions retain their accessible labels and destinations", async ()
   const html = await readFile(new URL("index.html", dist), "utf8");
   assert.match(html, /<a class="VPButton medium brand" href="https:\/\/github.com\/mateusneiva\/licht-launcher\/releases\/latest"[^>]*>Download on GitHub<\/a>/);
   assert.match(html, /<a class="VPButton medium alt" href="\/docs\/"[^>]*>Documentation<\/a>/);
-  assert.match(html, /<a class="VPButton medium alt" href="https:\/\/github.com\/mateusneiva\/licht-launcher"[^>]*>View source<\/a>/);
+  assert.doesNotMatch(html, />View source</);
+});
+
+test("the navbar links to the GitHub repository through an icon", async () => {
+  const html = await readFile(new URL("index.html", dist), "utf8");
+  const social = html.match(/<div class="VPSocialLinks[\s\S]*?<\/div>/)?.[0];
+  assert.ok(social);
+  assert.match(social, /href="https:\/\/github.com\/mateusneiva\/licht-launcher"/);
+  assert.match(social, /aria-label="github"/);
 });
 
 test("the navbar displays the existing logo alongside the site name", async () => {

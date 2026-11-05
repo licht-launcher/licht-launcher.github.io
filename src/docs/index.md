@@ -23,11 +23,11 @@ New here? Start with these.
 
 ## References
 
-- [Compatibility](/docs/reference/compatibility): supported systems and Minecraft versions.
-- [Game runtime](/docs/reference/game-runtime): modloaders, Java runtime, libraries and natives.
-- [Data and storage](/docs/reference/data-and-storage): what is stored and where.
-- [Network requests](/docs/reference/network-requests): which services are contacted.
-- [Authentication](/docs/reference/authentication): how Microsoft sign-in works.
+- [Compatibility](/docs/references/compatibility): supported systems and Minecraft versions.
+- [Game runtime](/docs/references/game-runtime): modloaders, Java runtime, libraries and natives.
+- [Data and storage](/docs/references/data-and-storage): what is stored and where.
+- [Network requests](/docs/references/network-requests): which services are contacted.
+- [Authentication](/docs/references/authentication): how Microsoft sign-in works.
 
 ## Contributing
 
