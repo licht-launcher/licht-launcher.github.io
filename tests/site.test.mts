@@ -42,7 +42,7 @@ test("published policies include the canonical content and resolve repository li
   assert.match(privacy, /href="https:\/\/github.com\/licht-launcher\/licht-launcher\/blob\/main\/README.md#uninstall"/);
   assert.match(terms, /href="https:\/\/github.com\/licht-launcher\/licht-launcher\/blob\/main\/LICENSE"/);
   assert.ok(terms.includes(`href="${base}privacy-policy#retention-and-deletion"`));
-  assert.match(terms, /These terms do not replace the MIT License/);
+  assert.match(terms, /These terms do not replace the GPL or restrict the rights it grants/);
 });
 
 test("policy headings are included from the downloaded canonical documents", async () => {

@@ -59,7 +59,7 @@ for (const page of ["index.html", "privacy-policy.html", "terms-of-use.html"]) {
     assert.match(footer, /not affiliated with Mojang Studios or Microsoft/);
     assert.match(footer, /<a href="\/privacy-policy">Privacy Policy<\/a>/);
     assert.match(footer, /<a href="\/terms-of-use">Terms of Use<\/a>/);
-    assert.match(footer, /<a href="https:\/\/github.com\/licht-launcher\/licht-launcher\/blob\/main\/LICENSE">MIT License<\/a>/);
+    assert.match(footer, /<a href="https:\/\/github.com\/licht-launcher\/licht-launcher\/blob\/main\/LICENSE">GNU General Public License v3\.0 or later<\/a>/);
   });
 }
 
