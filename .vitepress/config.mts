@@ -140,7 +140,7 @@ export default defineConfig({
     outline: [2, 3],
     footer: {
       message: `Unofficial project, not affiliated with Mojang Studios or Microsoft.<br><a href="/privacy-policy">Privacy Policy</a> · <a href="/terms-of-use">Terms of Use</a>`,
-      copyright: `Copyright © 2026 Mateus Neiva. Released under the <a href="${repository}/blob/main/LICENSE">MIT License</a>.`,
+      copyright: `Copyright © 2026 Mateus Neiva. Released under the <a href="${repository}/blob/main/LICENSE">GNU General Public License v3.0 or later</a>.`,
     },
   },
   markdown: {

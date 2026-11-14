@@ -7,7 +7,7 @@ description: "Contribute to Licht Launcher, an open-source Minecraft launcher: h
 
 Thank you for your interest in Licht Launcher. The project has one maintainer, Mateus Neiva ([@mateusneiva](https://github.com/mateusneiva)), who handles development, review of contributions and release decisions.
 
-The launcher is open source under the [MIT License](https://github.com/licht-launcher/licht-launcher/blob/main/LICENSE). The canonical guide is [CONTRIBUTING.md](https://github.com/licht-launcher/licht-launcher/blob/main/CONTRIBUTING.md) in the launcher repository; this section explains it in more detail.
+The launcher is open source under the [GNU General Public License v3.0 or later](https://github.com/licht-launcher/licht-launcher/blob/main/LICENSE). The canonical guide is [CONTRIBUTING.md](https://github.com/licht-launcher/licht-launcher/blob/main/CONTRIBUTING.md) in the launcher repository; this section explains it in more detail.
 
 ## In this section
 
@@ -46,7 +46,7 @@ External contributions need maintainer review before merging. Changes to CI, bui
 
 ## Licensing
 
-Respect copyright and licenses. Original contributions are submitted under the project's MIT License, and existing third-party notices and licenses must be preserved. A merged pull request does not grant repository write access or signing access.
+Respect copyright and licenses. Original contributions are submitted under the project's GNU General Public License v3.0 or later, and existing third-party notices and licenses must be preserved. A merged pull request does not grant repository write access or signing access.
 
 ## Conduct and contact
 
